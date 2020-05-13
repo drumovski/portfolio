@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@mixin page-link ($height: 100px){
+  text-align: center;
+  vertical-align: middle;
+  background: rgb(66,66,66);
+  background: linear-gradient(180deg, rgba(66,66,66,0.8393732492997199) 0%, rgba(0,0,0,0.8477766106442577) 45%, rgba(0,0,0,0.8757878151260504) 57%, rgba(69,69,69,0.8785889355742297) 100%);
+  height: $height;
+  box-shadow: 10px 9px 5px -1px rgba(0,0,0,0.26);
+  display: flex;
+  transition: letter-spacing 1s;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+  // border: 1px solid green;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+
+body{
+  font-family: 'Abel', sans-serif;
+  background-image: url("../images/back1.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: top;
+  // position: fixed;
+  background-attachment: fixed;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  height: 1500px;
+  }
+
+
+header {
+  .title-box {
+    background: rgb(66,66,66);
+    background: linear-gradient(180deg, rgba(66,66,66,0.8393732492997199) 0%, rgba(0,0,0,0.8477766106442577) 45%, rgba(0,0,0,0.8757878151260504) 57%, rgba(69,69,69,0.8785889355742297) 100%);
+    margin-left: 56%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 50%;
+    text-align: center;
+    border-radius: .2em;
+    animation-name: fade-in;
+    animation-duration: 3s;
+
+    @keyframes fade-in {
+      from {opacity:0;}
+      to {opacity: 1;}
+    }
+    h1 {
+      font-size: 3vw;
+      letter-spacing: 0.5em
+    }
+    h2 {
+      font-size: 2vw;
+    }
+  }
+}
+
+main{
+  height: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .page-link {
+    @include page-link($height: 150px);
+    &:hover {
+      letter-spacing: .5em;
+    }
+
+    p {
+      margin: auto;
+      text-align: center;
+      font-size: 150%;
+    }
+    
+
+  }
+}
+footer {
+  // display: flex;
+  margin-top: 300px;
+  @include page-link();
+  .icons {
+    
+    width: 200px;
+    margin: auto;
+    // align-self: center;
+    a {
+      margin: 10px;
+    }
+  }
+
+}
