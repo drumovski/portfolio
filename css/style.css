@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  background-image: url("../images/back1.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  height: 1500px;
+}
+
+header .title-box {
+  background: #424242;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 66, 66, 0.839373)), color-stop(45%, rgba(0, 0, 0, 0.847777)), color-stop(57%, rgba(0, 0, 0, 0.875788)), to(rgba(69, 69, 69, 0.878589)));
+  background: linear-gradient(180deg, rgba(66, 66, 66, 0.839373) 0%, rgba(0, 0, 0, 0.847777) 45%, rgba(0, 0, 0, 0.875788) 57%, rgba(69, 69, 69, 0.878589) 100%);
+  margin-left: 56%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 50%;
+  text-align: center;
+  border-radius: .2em;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .title-box h1 {
+  font-size: 3vw;
+  letter-spacing: 0.5em;
+}
+
+header .title-box h2 {
+  font-size: 2vw;
+}
+
+main {
+  height: 1600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .page-link {
+  text-align: center;
+  vertical-align: middle;
+  background: #424242;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 66, 66, 0.839373)), color-stop(45%, rgba(0, 0, 0, 0.847777)), color-stop(57%, rgba(0, 0, 0, 0.875788)), to(rgba(69, 69, 69, 0.878589)));
+  background: linear-gradient(180deg, rgba(66, 66, 66, 0.839373) 0%, rgba(0, 0, 0, 0.847777) 45%, rgba(0, 0, 0, 0.875788) 57%, rgba(69, 69, 69, 0.878589) 100%);
+  height: 150px;
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: letter-spacing 1s;
+  transition: letter-spacing 1s;
+}
+
+main .page-link:hover {
+  letter-spacing: .5em;
+}
+
+main .page-link p {
+  margin: auto;
+  text-align: center;
+  font-size: 150%;
+}
+
+footer {
+  margin-top: 300px;
+  text-align: center;
+  vertical-align: middle;
+  background: #424242;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 66, 66, 0.839373)), color-stop(45%, rgba(0, 0, 0, 0.847777)), color-stop(57%, rgba(0, 0, 0, 0.875788)), to(rgba(69, 69, 69, 0.878589)));
+  background: linear-gradient(180deg, rgba(66, 66, 66, 0.839373) 0%, rgba(0, 0, 0, 0.847777) 45%, rgba(0, 0, 0, 0.875788) 57%, rgba(69, 69, 69, 0.878589) 100%);
+  height: 100px;
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: letter-spacing 1s;
+  transition: letter-spacing 1s;
+}
+
+footer .icons {
+  width: 200px;
+  margin: auto;
+}
+
+footer .icons a {
+  margin: 10px;
+}
+/*# sourceMappingURL=style.css.map */
