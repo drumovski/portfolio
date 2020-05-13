@@ -130,4 +130,10 @@ footer .icons {
 footer .icons a {
   margin: 10px;
 }
+
+@media screen and (min-width: 600px) {
+  header .title-box {
+    margin-left: 50%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

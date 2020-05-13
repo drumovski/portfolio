@@ -115,3 +115,10 @@ footer {
 
 }
 
+@media screen and (min-width: 600px) {
+  header {
+    .title-box {
+      margin-left: 50%;
+    }
+  }
+}
