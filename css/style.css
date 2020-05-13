@@ -3,6 +3,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 0;
+  border: 1px solid green;
   padding: 0px;
   margin: 0px;
   color: white;
@@ -25,8 +26,8 @@ header .title-box {
   background: #424242;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 66, 66, 0.839373)), color-stop(45%, rgba(0, 0, 0, 0.847777)), color-stop(57%, rgba(0, 0, 0, 0.875788)), to(rgba(69, 69, 69, 0.878589)));
   background: linear-gradient(180deg, rgba(66, 66, 66, 0.839373) 0%, rgba(0, 0, 0, 0.847777) 45%, rgba(0, 0, 0, 0.875788) 57%, rgba(69, 69, 69, 0.878589) 100%);
-  margin-left: 56%;
-  margin-right: 10%;
+  margin-left: 30%;
+  margin-right: 9%;
   margin-top: 5%;
   margin-bottom: 50%;
   text-align: center;
@@ -56,12 +57,12 @@ header .title-box {
 }
 
 header .title-box h1 {
-  font-size: 3vw;
+  font-size: 2rem;
   letter-spacing: 0.5em;
 }
 
 header .title-box h2 {
-  font-size: 2vw;
+  font-size: 2rem;
 }
 
 main {
