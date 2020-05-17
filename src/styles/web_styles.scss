@@ -13,8 +13,7 @@ header {
   .title-box {
     @include page-link($height: 70px);
     width: 300px;
-    margin: auto;
-    margin-top: 50px;
+    margin: 25px auto 25px;
     text-align: center;
     border-radius: .2em;
 
@@ -28,27 +27,41 @@ header {
 }
 
 body {
-    display: flex;
-flex-direction: column;
-justify-content: space-between;
-min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  text-align: center;
+
+  section {
 
     article {
-        margin:auto;
-        width: 50%;
-        background-color: $grey;
-        img {
-            max-width: 90%;
-        }
+      margin: 35px auto;
+      width: 80%;
+      background-color: $grey;
+      h3 {
+        padding: 5px;
+      }
+
+      img {
+        max-width: 90%;
+      }
+
+      p {
+        max-width: 90%;
+        text-align: center;
+        margin: auto;
+
+      }
     }
+  }
 }
 
 @include footer;
@@ -56,4 +69,17 @@ main {
 // Tablet and above size
 @media screen and (min-width: 600px) {
   @include drop-down-menu;
+
+  main {
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+
+      article {
+        max-width: 45%;
+
+      }
+    }
+  }
 }

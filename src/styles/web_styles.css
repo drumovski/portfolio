@@ -83,8 +83,7 @@ header .title-box {
   -webkit-transition: letter-spacing 1s;
   transition: letter-spacing 1s;
   width: 300px;
-  margin: auto;
-  margin-top: 50px;
+  margin: 25px auto 25px;
   text-align: center;
   border-radius: .2em;
 }
@@ -124,14 +123,24 @@ main {
   text-align: center;
 }
 
-main article {
-  margin: auto;
-  width: 50%;
+main section article {
+  margin: 35px auto;
+  width: 80%;
   background-color: #333;
 }
 
-main article img {
+main section article h3 {
+  padding: 5px;
+}
+
+main section article img {
   max-width: 90%;
+}
+
+main section article p {
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
 }
 
 footer {
@@ -196,6 +205,16 @@ footer #contacts a {
     letter-spacing: .15em;
     -webkit-transition: letter-spacing .7s;
     transition: letter-spacing .7s;
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main section article {
+    max-width: 45%;
   }
 }
 /*# sourceMappingURL=web_styles.css.map */
