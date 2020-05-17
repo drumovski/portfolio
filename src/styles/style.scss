@@ -15,12 +15,11 @@
 * {
   box-sizing: border-box;
   margin-top: 0;
-  border: 1px solid green;
+  // border: 1px solid green;
   padding: 0px;
   margin: 0px;
   color: white;
 }
-
 
 body {
   font-family: 'Abel', sans-serif;
@@ -36,7 +35,7 @@ body {
   // display: flex;
   // flex-direction: column;
   // justify-content: space-between;
-  height: 1500px;
+  height: 100%;
 }
 
 
@@ -44,14 +43,15 @@ header {
   .title-box {
     background: rgb(66, 66, 66);
     background: linear-gradient(180deg, rgba(66, 66, 66, 0.8393732492997199) 0%, rgba(0, 0, 0, 0.8477766106442577) 45%, rgba(0, 0, 0, 0.8757878151260504) 57%, rgba(69, 69, 69, 0.8785889355742297) 100%);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0.8743697308024773) 34%, rgba(0, 0, 0, 1) 100%);
     margin-left: 30%;
-    margin-right: 9%;
+    margin-right: 0px;
     margin-top: 5%;
     margin-bottom: 50%;
     text-align: center;
     border-radius: .2em;
     animation-name: fade-in;
-    animation-duration: 3s;
+    animation-duration: 4s;
 
     @keyframes fade-in {
       from {
@@ -91,6 +91,10 @@ main {
       margin: auto;
       text-align: center;
       font-size: 150%;
+
+      a{
+        text-decoration: none;
+      }
     }
 
 
@@ -98,27 +102,114 @@ main {
 }
 
 footer {
-  // display: flex;
+  display: flex;
+  flex-direction: column;
   margin-top: 300px;
   @include page-link();
 
-  .icons {
-
+  #icons {
     width: 200px;
     margin: auto;
 
-    // align-self: center;
     a {
-      margin: 10px;
+      margin: 0px 10px 0px;
+    }
+
+  }
+
+  #contacts {
+    width: 300px;
+    margin: 0px auto 30px;
+
+    a {
+      padding: 5px;
     }
   }
+}
+
+
+#hamnav label {
+  display: inline-block;
+  color: white;
+  background: #c0460d;
+  font-style: normal;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+/* Break down menu items into vertical */
+#hamitems {
+  a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-top: 1px solid #333;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+
 
 }
 
+/* Toggle Show/Hide Menu */
+#hamitems {
+  display: none;
+}
+
+#hamnav input:checked~#hamitems {
+  display: block;
+}
+
+#hamnav {
+  width: 100%;
+  background: #000;
+  top: 0;
+
+  a {
+    &:hover {
+      letter-spacing: .5em;
+      background: #c0460d;
+      letter-spacing: .15em;
+      transition: letter-spacing .7s;
+    }
+  }
+}
+
+#hamburger {
+  display: none;
+}
+
+// Larger screens
 @media screen and (min-width: 600px) {
   header {
     .title-box {
-      margin-left: 50%;
+      margin-left: 30%;
+    }
+  }
+
+  /* Hide Hamburger */
+  #hamnav label,
+  #hamburger {
+    display: none;
+  }
+
+  /* Horizontal Menu Items */
+  #hamitems {
+    display: flex;
+
+    a {
+      width: 16.666%;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        background: #c0460d;
+        letter-spacing: .15em;
+        transition: letter-spacing .7s;
+      }
     }
   }
 }

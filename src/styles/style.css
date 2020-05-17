@@ -3,7 +3,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin-top: 0;
-  border: 1px solid green;
   padding: 0px;
   margin: 0px;
   color: white;
@@ -19,23 +18,25 @@ body {
   -o-background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  height: 1500px;
+  height: 100%;
 }
 
 header .title-box {
   background: #424242;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(66, 66, 66, 0.839373)), color-stop(45%, rgba(0, 0, 0, 0.847777)), color-stop(57%, rgba(0, 0, 0, 0.875788)), to(rgba(69, 69, 69, 0.878589)));
   background: linear-gradient(180deg, rgba(66, 66, 66, 0.839373) 0%, rgba(0, 0, 0, 0.847777) 45%, rgba(0, 0, 0, 0.875788) 57%, rgba(69, 69, 69, 0.878589) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(34%, rgba(0, 0, 0, 0.87437)), to(black));
+  background: linear-gradient(90deg, rgba(2, 0, 36, 0) 0%, rgba(0, 0, 0, 0.87437) 34%, black 100%);
   margin-left: 30%;
-  margin-right: 9%;
+  margin-right: 0px;
   margin-top: 5%;
   margin-bottom: 50%;
   text-align: center;
   border-radius: .2em;
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 @-webkit-keyframes fade-in {
@@ -105,7 +106,18 @@ main .page-link p {
   font-size: 150%;
 }
 
+main .page-link p a {
+  text-decoration: none;
+}
+
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 300px;
   text-align: center;
   vertical-align: middle;
@@ -115,25 +127,104 @@ footer {
   height: 100px;
   -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
           box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-transition: letter-spacing 1s;
   transition: letter-spacing 1s;
 }
 
-footer .icons {
+footer #icons {
   width: 200px;
   margin: auto;
 }
 
-footer .icons a {
-  margin: 10px;
+footer #icons a {
+  margin: 0px 10px 0px;
+}
+
+footer #contacts {
+  width: 300px;
+  margin: 0px auto 30px;
+}
+
+footer #contacts a {
+  padding: 5px;
+}
+
+#hamnav label {
+  display: inline-block;
+  color: white;
+  background: #c0460d;
+  font-style: normal;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+/* Break down menu items into vertical */
+#hamitems a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Toggle Show/Hide Menu */
+#hamitems {
+  display: none;
+}
+
+#hamnav input:checked ~ #hamitems {
+  display: block;
+}
+
+#hamnav {
+  width: 100%;
+  background: #000;
+  top: 0;
+}
+
+#hamnav a:hover {
+  letter-spacing: .5em;
+  background: #c0460d;
+  letter-spacing: .15em;
+  -webkit-transition: letter-spacing .7s;
+  transition: letter-spacing .7s;
+}
+
+#hamburger {
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
   header .title-box {
-    margin-left: 50%;
+    margin-left: 30%;
+  }
+  /* Hide Hamburger */
+  #hamnav label,
+  #hamburger {
+    display: none;
+  }
+  /* Horizontal Menu Items */
+  #hamitems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #hamitems a {
+    width: 16.666%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover {
+    background: #c0460d;
+    letter-spacing: .15em;
+    -webkit-transition: letter-spacing .7s;
+    transition: letter-spacing .7s;
   }
 }
 /*# sourceMappingURL=style.css.map */
