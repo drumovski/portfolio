@@ -28,7 +28,7 @@ header {
 
     h1 {
       font-size: 2rem;
-      letter-spacing: 0.5em
+      letter-spacing: 0.5em;
     }
 
     h2 {
@@ -63,6 +63,9 @@ main {
 }
 
 @include footer;
+footer {
+  margin-top: 300px;
+}
 
 // Tablet and above size
 @media screen and (min-width: 600px) {

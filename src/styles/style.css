@@ -53,7 +53,7 @@ body {
 
 #hamnav {
   width: 100%;
-  background: #000;
+  background: black;
   top: 0;
 }
 
@@ -162,7 +162,6 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 300px;
   text-align: center;
   vertical-align: middle;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
@@ -191,6 +190,10 @@ footer #contacts {
 
 footer #contacts a {
   padding: 5px;
+}
+
+footer {
+  margin-top: 300px;
 }
 
 @media screen and (min-width: 600px) {

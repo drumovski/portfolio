@@ -5,71 +5,55 @@
 
 @include initialize;
 
-@include body("../images/back1.jpg");
+@include body("../images/back2.jpg");
 
 @include nav;
 
 header {
   .title-box {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
-    margin-left: 30%;
-    margin-right: 0px;
-    margin-top: 5%;
-    margin-bottom: 50%;
+    @include page-link($height: 70px);
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
     text-align: center;
     border-radius: .2em;
-    animation-name: fade-in;
-    animation-duration: 4s;
-
-    @keyframes fade-in {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
 
     h1 {
       font-size: 2rem;
-      letter-spacing: 0.5em
+      margin: auto;
+      text-align: center;
     }
 
-    h2 {
-      font-size: 2rem;
-    }
   }
 }
 
+body {
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+min-height: 100vh;
+}
+
 main {
-  height: 1600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    text-align: center;
 
-  .page-link {
-    @include page-link($height: 150px);
-
-    &:hover {
-      letter-spacing: .5em;
+    article {
+        margin:auto;
+        width: 50%;
+        background-color: $grey;
+        img {
+            max-width: 90%;
+        }
     }
-
-    p {
-      margin: auto;
-      text-align: center;
-      font-size: 150%;
-
-      a{
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 @include footer;
 
 // Tablet and above size
 @media screen and (min-width: 600px) {
-  header {
-    .title-box {
-      margin-left: 30%;
-    }
-  }
   @include drop-down-menu;
 }

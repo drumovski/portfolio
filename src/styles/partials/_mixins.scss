@@ -73,7 +73,7 @@
       
       #hamnav {
         width: 100%;
-        background: #000;
+        background: $black;
         top: 0;
       
         a {
@@ -97,7 +97,7 @@
     footer {
         display: flex;
         flex-direction: column;
-        margin-top: 300px;
+
         @include page-link();
 
         #icons {
