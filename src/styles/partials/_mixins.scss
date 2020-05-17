@@ -14,6 +14,7 @@
         font-family: 'Abel', sans-serif;
         background-image: url($image);
         background-color: $white;
+        color: $white;
         background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -30,7 +31,7 @@
 @mixin page-link ($height: 100px) {
     text-align: center;
     vertical-align: middle;
-    background: linear-gradient(180deg, $transparent_grey 0%, $black 45%, $black 55%, $transparent_grey 100%);
+    background: $gradient;
     height: $height;
     box-shadow: $box-shadow;
     display: flex;

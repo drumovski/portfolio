@@ -12,6 +12,7 @@ body {
   font-family: 'Abel', sans-serif;
   background-image: url("../images/back2.jpg");
   background-color: #eeeeee;
+  color: #eeeeee;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -124,13 +125,18 @@ main {
 }
 
 main section article {
+  border-radius: .7em;
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
   margin: 35px auto;
   width: 80%;
-  background-color: #333;
 }
 
 main section article h3 {
   padding: 5px;
+  color: #eeeeee;
 }
 
 main section article img {

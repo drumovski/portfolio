@@ -11,6 +11,7 @@
 
 header {
   .title-box {
+
     @include page-link($height: 70px);
     width: 300px;
     margin: 25px auto 25px;
@@ -43,11 +44,15 @@ main {
   section {
 
     article {
+      border-radius: .7em;
+      box-shadow: $box-shadow;
+      background: $gradient;
       margin: 35px auto;
       width: 80%;
-      background-color: $grey;
+
       h3 {
         padding: 5px;
+        color: $white;
       }
 
       img {
