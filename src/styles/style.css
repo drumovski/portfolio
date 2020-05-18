@@ -11,6 +11,13 @@
 body {
   font-family: 'Abel', sans-serif;
   color: #eeeeee;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  height: 100%;
 }
 
 .parallax {
@@ -62,28 +69,10 @@ body {
   height: 250%;
 }
 
-.parallax__layer--back-web {
-  -webkit-transform: translateZ(-1px) scale(2);
-          transform: translateZ(-1px) scale(2);
-  background-image: url("/src/images/web.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 200%;
-}
-
 .parallax__layer--back-home {
   -webkit-transform: translateZ(-1px) scale(2);
           transform: translateZ(-1px) scale(2);
   background-image: url("/src/images/home.jpg");
-  background-size: cover;
-  background-position: top;
-  height: 200%;
-}
-
-.parallax__layer--back-code {
-  -webkit-transform: translateZ(-4px) scale(5);
-          transform: translateZ(-4px) scale(5);
-  background-image: url("/src/images/code.jpg");
   background-size: cover;
   background-position: top;
   height: 200%;
@@ -135,6 +124,14 @@ body {
 
 #hamburger {
   display: none;
+}
+
+.web-body {
+  background-image: url("../images/web.jpg");
+}
+
+.code-body {
+  background-image: url("../images/code.jpg");
 }
 
 header .title-box-home {

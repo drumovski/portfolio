@@ -38,16 +38,6 @@
     justify-content: space-between;
     transform: translateZ(0);
     height: 250%;
-
-  }
-
-  .parallax__layer--back-web {
-    transform: translateZ(-1px) scale(2);
-    background-image: url("/src/images/web.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 200%;
-
   }
 
   .parallax__layer--back-home {
@@ -58,30 +48,22 @@
     height: 200%;
   }
 
-  .parallax__layer--back-code {
-    transform: translateZ(-4px) scale(5);
-    background-image: url("/src/images/code.jpg");
-    background-size: cover;
-    background-position: top;
-    height: 200%;
-  }
 }
 
-  @mixin body($image) {
-    body {
-      font-family: 'Abel', sans-serif;
-      background-image: url($image);
-      background-color: $white;
-      color: $white;
-      background-size: cover;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-position: top;
-      background-attachment: fixed;
-      height: 100%;
-    }
+@mixin body {
+  body {
+    font-family: 'Abel', sans-serif;
+    // background-color: $white;
+    color: $white;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    height: 100%;
   }
+}
 
 @mixin main-home {
   .main-home {
@@ -90,8 +72,8 @@
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-  
-  
+
+
     .page-link {
       text-align: center;
       vertical-align: middle;
@@ -100,142 +82,144 @@
       box-shadow: $box-shadow;
       display: flex;
       transition: letter-spacing 1s;
-  
+
       &:hover {
         letter-spacing: .5em;
       }
-  
+
       p {
         margin: auto;
         text-align: center;
         font-size: 150%;
-  
-        a{
+
+        a {
           text-decoration: none;
         }
       }
     }
   }
-  
+
 }
-  @mixin page-link ($height: 100px) {
-    text-align: center;
-    vertical-align: middle;
-    background: $gradient;
-    height: $height;
-    box-shadow: $box-shadow;
-    display: flex;
-    transition: letter-spacing 1s;
+
+@mixin page-link ($height: 100px) {
+  text-align: center;
+  vertical-align: middle;
+  background: $gradient;
+  height: $height;
+  box-shadow: $box-shadow;
+  display: flex;
+  transition: letter-spacing 1s;
+}
+
+// Navigation dropdown and menu bar
+@mixin nav {
+  #hamnav label {
+    display: inline-block;
+    color: $white;
+    background: $orange;
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
   }
 
-  @mixin nav {
-    #hamnav label {
-      display: inline-block;
-      color: $white;
-      background: $orange;
-      font-style: normal;
-      font-size: 1.2em;
-      padding: 10px;
-    }
-
-    /* Break down menu items into vertical */
-    #hamitems {
-      a {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        border-top: 1px solid $grey;
-        text-align: center;
-        padding: 10px;
-        text-decoration: none;
-      }
-
-
-    }
-
-    /* Toggle Show/Hide Menu */
-    #hamitems {
-      display: none;
-    }
-
-    #hamnav input:checked~#hamitems {
+  /* Break down menu items into vertical */
+  #hamitems {
+    a {
+      box-sizing: border-box;
       display: block;
-    }
-
-    #hamnav {
       width: 100%;
-      background: $black;
-      top: 0;
+      border-top: 1px solid $grey;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems {
+    display: none;
+  }
+
+  #hamnav input:checked~#hamitems {
+    display: block;
+  }
+
+  #hamnav {
+    width: 100%;
+    background: $black;
+    top: 0;
+
+    a {
+      &:hover {
+        letter-spacing: .5em;
+        background: $orange;
+        letter-spacing: .15em;
+        transition: letter-spacing .7s;
+      }
+    }
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+@mixin drop-down-menu {
+
+  /* Hide Hamburger */
+  #hamnav label,
+  #hamburger {
+    display: none;
+  }
+
+  /* Horizontal Menu Items */
+  #hamitems {
+    display: flex;
+
+    a {
+      width: 16.666%;
+      padding: 10px;
+      color: $white;
+      text-decoration: none;
+      text-align: center;
+
+      &:hover {
+        background: $orange;
+        letter-spacing: .15em;
+        transition: letter-spacing .7s;
+      }
+    }
+  }
+}
+
+
+@mixin footer {
+
+  footer {
+    display: flex;
+    flex-direction: column;
+
+    @include page-link();
+
+    #icons {
+      width: 200px;
+      margin: auto;
 
       a {
-        &:hover {
-          letter-spacing: .5em;
-          background: $orange;
-          letter-spacing: .15em;
-          transition: letter-spacing .7s;
-        }
-      }
-    }
-
-    #hamburger {
-      display: none;
-    }
-  }
-
-
-  @mixin footer {
-
-    footer {
-      display: flex;
-      flex-direction: column;
-
-      @include page-link();
-
-      #icons {
-        width: 200px;
-        margin: auto;
-
-        a {
-          margin: 0px 10px 0px;
-        }
-
+        margin: 0px 10px 0px;
       }
 
-      #contacts {
-        width: 300px;
-        margin: 0px auto 30px;
-
-        a {
-          padding: 5px;
-        }
-      }
-    }
-  }
-
-  @mixin drop-down-menu {
-
-    /* Hide Hamburger */
-    #hamnav label,
-    #hamburger {
-      display: none;
     }
 
-    /* Horizontal Menu Items */
-    #hamitems {
-      display: flex;
+    #contacts {
+      width: 300px;
+      margin: 0px auto 30px;
 
       a {
-        width: 16.666%;
-        padding: 10px;
-        color: $white;
-        text-decoration: none;
-        text-align: center;
-
-        &:hover {
-          background: $orange;
-          letter-spacing: .15em;
-          transition: letter-spacing .7s;
-        }
+        padding: 5px;
       }
     }
   }
+}
