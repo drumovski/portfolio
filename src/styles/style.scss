@@ -100,6 +100,13 @@ header {
     }
   }
 }
+#about-me {
+  width: 90%;
+    img {
+      float: left;
+      width: 50%;
+    }
+}
 
 @include main-home; // home page main content has different styling from the rest
 
@@ -117,8 +124,10 @@ header {
 
       article {
         max-width: 45%;
-
       }
+      #about-me {
+        max-width: 75%;
+      } 
     }
   }
 }

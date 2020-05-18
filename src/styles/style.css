@@ -240,6 +240,15 @@ header .title-box h1 {
   margin: auto;
 }
 
+#about-me {
+  width: 90%;
+}
+
+#about-me img {
+  float: left;
+  width: 50%;
+}
+
 .main-home {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -357,6 +366,9 @@ footer #contacts a {
   }
   .main-basic section article {
     max-width: 45%;
+  }
+  .main-basic section #about-me {
+    max-width: 75%;
   }
 }
 /*# sourceMappingURL=style.css.map */
