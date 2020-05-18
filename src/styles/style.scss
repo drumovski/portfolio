@@ -5,74 +5,117 @@
 
 @include initialize;
 
-@include body("../images/back1.jpg");
+body {
+  font-family: 'Abel', sans-serif;
+  color: $white;
+}
+@include paralax;
 
 @include nav;
 
 header {
-  .title-box {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
-    margin-left: 30%;
-    margin-right: 0px;
-    margin-top: 5%;
-    margin-bottom: 50%;
-    text-align: center;
-    border-radius: .3em;
-    animation-name: fade-in;
-    animation-duration: 4s;
+  .title-box-home { 
+  //Home page title box
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
+  margin-left: 30%;
+  margin-right: 0px;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  text-align: center;
+  border-radius: .3em;
+  animation-name: fade-in;
+  animation-duration: 4s;
 
-    @keyframes fade-in {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
+  @keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.5em;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+  .title-box {
+    //basic title box
+    text-align: center;
+    vertical-align: middle;
+    background: $gradient;
+    box-shadow: $box-shadow;
+    display: flex;
+    transition: letter-spacing 1s;
+    width: 300px;
+    margin: 25px auto 25px;
+    text-align: center;
+    border-radius: .2em;
 
     h1 {
       font-size: 2rem;
-      letter-spacing: 0.5em;
+      margin: auto;
+      text-align: center;
     }
 
-    h2 {
-      font-size: 2rem;
-    }
   }
 }
 
-main {
-  height: 1600px;
+
+.main-basic {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto;
+  text-align: center;
 
-  .page-link {
-    @include page-link($height: 150px);
+  section {
 
-    &:hover {
-      letter-spacing: .5em;
-    }
+    article {
+      border-radius: .7em;
+      box-shadow: $box-shadow;
+      background: $gradient;
+      margin: 35px auto;
+      width: 80%;
 
-    p {
-      margin: auto;
-      text-align: center;
-      font-size: 150%;
+      h3 {
+        padding: 5px;
+        color: $white;
+      }
 
-      a{
-        text-decoration: none;
+      img {
+        max-width: 90%;
+      }
+
+      p {
+        max-width: 90%;
+        text-align: center;
+        margin: auto;
+
       }
     }
   }
 }
 
+@include main-home;
+
 @include footer;
-footer {
-  margin-top: 300px;
-}
 
 // Tablet and above size
 @media screen and (min-width: 600px) {
-  header {
-    .title-box {
-      margin-left: 30%;
+  @include drop-down-menu;
+
+  .main-basic {
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+
+      article {
+        max-width: 45%;
+
+      }
     }
   }
-  @include drop-down-menu;
 }

@@ -1,30 +1,124 @@
 @mixin initialize {
-    * {
-        box-sizing: border-box;
-        margin-top: 0;
-        // border: 1px solid green;
-        padding: 0px;
-        margin: 0px;
-        color: $white;
-      }
+  * {
+    box-sizing: border-box;
+    margin-top: 0;
+    // border: 1px solid green;
+    padding: 0px;
+    margin: 0px;
+    color: $white;
+  }
 }
 
-@mixin body($image) {
-    body {
-        font-family: 'Abel', sans-serif;
-        background-image: url($image);
-        background-color: $white;
-        color: $white;
-        background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
-        height: 100%;
-      }
+@mixin paralax {
+  .parallax {
+    display: flex;
+    flex-direction: column;
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    position: relative;
+  }
+
+  .parallax__layer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  .parallax__layer--forward {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateZ(0);
+    height: 250%;
+
+  }
+
+  .parallax__layer--back-web {
+    transform: translateZ(-1px) scale(2);
+    background-image: url("/src/images/web.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200%;
+
+  }
+
+  .parallax__layer--back-home {
+    transform: translateZ(-1px) scale(2);
+    background-image: url("/src/images/home.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 200%;
+  }
+
+  .parallax__layer--back-code {
+    transform: translateZ(-4px) scale(5);
+    background-image: url("/src/images/code.jpg");
+    background-size: cover;
+    background-position: top;
+    height: 200%;
+  }
 }
-@mixin page-link ($height: 100px) {
+
+  @mixin body($image) {
+    body {
+      font-family: 'Abel', sans-serif;
+      background-image: url($image);
+      background-color: $white;
+      color: $white;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-position: top;
+      background-attachment: fixed;
+      height: 100%;
+    }
+  }
+
+@mixin main-home {
+  .main-home {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  
+  
+    .page-link {
+      text-align: center;
+      vertical-align: middle;
+      background: $gradient;
+      height: 100px;
+      box-shadow: $box-shadow;
+      display: flex;
+      transition: letter-spacing 1s;
+  
+      &:hover {
+        letter-spacing: .5em;
+      }
+  
+      p {
+        margin: auto;
+        text-align: center;
+        font-size: 150%;
+  
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  
+}
+  @mixin page-link ($height: 100px) {
     text-align: center;
     vertical-align: middle;
     background: $gradient;
@@ -32,115 +126,116 @@
     box-shadow: $box-shadow;
     display: flex;
     transition: letter-spacing 1s;
-}
+  }
 
-@mixin nav {
+  @mixin nav {
     #hamnav label {
-        display: inline-block;
-        color: $white;
-        background: $orange;
-        font-style: normal;
-        font-size: 1.2em;
-        padding: 10px;
-      }
-      
-      /* Break down menu items into vertical */
-      #hamitems {
-        a {
-          box-sizing: border-box;
-          display: block;
-          width: 100%;
-          border-top: 1px solid $grey;
-          text-align: center;
-          padding: 10px;
-          text-decoration: none;
-        }
-      
-      
-      }
-      
-      /* Toggle Show/Hide Menu */
-      #hamitems {
-        display: none;
-      }
-      
-      #hamnav input:checked~#hamitems {
+      display: inline-block;
+      color: $white;
+      background: $orange;
+      font-style: normal;
+      font-size: 1.2em;
+      padding: 10px;
+    }
+
+    /* Break down menu items into vertical */
+    #hamitems {
+      a {
+        box-sizing: border-box;
         display: block;
-      }
-      
-      #hamnav {
         width: 100%;
-        background: $black;
-        top: 0;
-      
-        a {
-          &:hover {
-            letter-spacing: .5em;
-            background: $orange;
-            letter-spacing: .15em;
-            transition: letter-spacing .7s;
-          }
+        border-top: 1px solid $grey;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+      }
+
+
+    }
+
+    /* Toggle Show/Hide Menu */
+    #hamitems {
+      display: none;
+    }
+
+    #hamnav input:checked~#hamitems {
+      display: block;
+    }
+
+    #hamnav {
+      width: 100%;
+      background: $black;
+      top: 0;
+
+      a {
+        &:hover {
+          letter-spacing: .5em;
+          background: $orange;
+          letter-spacing: .15em;
+          transition: letter-spacing .7s;
         }
       }
-      
-      #hamburger {
-        display: none;
-      }
-}
+    }
+
+    #hamburger {
+      display: none;
+    }
+  }
 
 
-@mixin footer {
+  @mixin footer {
 
     footer {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-        @include page-link();
+      @include page-link();
 
-        #icons {
-            width: 200px;
-            margin: auto;
+      #icons {
+        width: 200px;
+        margin: auto;
 
-            a {
-                margin: 0px 10px 0px;
-            }
-
+        a {
+          margin: 0px 10px 0px;
         }
 
-        #contacts {
-            width: 300px;
-            margin: 0px auto 30px;
+      }
 
-            a {
-                padding: 5px;
-            }
+      #contacts {
+        width: 300px;
+        margin: 0px auto 30px;
+
+        a {
+          padding: 5px;
         }
-    }
-}
-
-@mixin drop-down-menu{
-      /* Hide Hamburger */
-  #hamnav label,
-  #hamburger {
-    display: none;
-  }
-
-  /* Horizontal Menu Items */
-  #hamitems {
-    display: flex;
-
-    a {
-      width: 16.666%;
-      padding: 10px;
-      color: $white;
-      text-decoration: none;
-      text-align: center;
-
-      &:hover {
-        background: $orange;
-        letter-spacing: .15em;
-        transition: letter-spacing .7s;
       }
     }
   }
-}
+
+  @mixin drop-down-menu {
+
+    /* Hide Hamburger */
+    #hamnav label,
+    #hamburger {
+      display: none;
+    }
+
+    /* Horizontal Menu Items */
+    #hamitems {
+      display: flex;
+
+      a {
+        width: 16.666%;
+        padding: 10px;
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+          background: $orange;
+          letter-spacing: .15em;
+          transition: letter-spacing .7s;
+        }
+      }
+    }
+  }
