@@ -1,28 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0;
+  padding: 0px;
+  margin: 0px;
+  color: #eeeeee;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  height: 100vh;
+  color: #eeeeee;
+  padding: 0px;
+  margin: 0px;
+}
+
 .parallax {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-perspective: 1px;
           perspective: 1px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  width: 100vw;
+  position: relative;
 }
 
 .parallax__layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100vw;
 }
 
-.parallax__layer--base {
+.parallax__layer--forward {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+  height: 250%;
+}
+
+.parallax__layer--back-code {
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+  background-image: url("/src/images/back2.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200%;
+}
+
+.parallax__layer--back-home {
+  -webkit-transform: translateZ(-1px) scale(2);
+          transform: translateZ(-1px) scale(2);
+  background-image: url("/src/images/back1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-position: top;
+  height: 200%;
+}
+
+#hamnav label {
+  display: inline-block;
+  color: #eeeeee;
+  background: #c0460d;
+  font-style: normal;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+/* Break down menu items into vertical */
+#hamitems a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-top: 1px solid #333;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* Toggle Show/Hide Menu */
+#hamitems {
+  display: none;
+}
+
+#hamnav input:checked ~ #hamitems {
+  display: block;
+}
+
+#hamnav {
+  width: 100%;
+  background: black;
+  top: 0;
+}
+
+#hamnav a:hover {
+  letter-spacing: .5em;
+  background: #c0460d;
+  letter-spacing: .15em;
+  -webkit-transition: letter-spacing .7s;
+  transition: letter-spacing .7s;
+}
+
+#hamburger {
+  display: none;
+}
+
+header .title-box-home {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(53, 53, 53, 0.82)), color-stop(30%, black), to(black));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(53, 53, 53, 0.82) 10%, black 30%, black 100%);
+  margin-left: 30%;
+  margin-right: 0px;
+  margin-top: 5%;
+  margin-bottom: 50%;
+  text-align: center;
+  border-radius: .3em;
+  -webkit-animation-name: fade-in;
+          animation-name: fade-in;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header .title-box-home h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5em;
+}
+
+header .title-box-home h2 {
+  font-size: 2rem;
+}
+
+header .title-box {
+  text-align: center;
+  vertical-align: middle;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: letter-spacing 1s;
+  transition: letter-spacing 1s;
+  width: 300px;
+  margin: 25px auto 25px;
+  text-align: center;
+  border-radius: .2em;
+}
+
+header .title-box h1 {
+  font-size: 2rem;
+  margin: auto;
   text-align: center;
 }
 
-.parallax__layer--back {
-  -webkit-transform: translateZ(-2px) scale(3);
-          transform: translateZ(-2px) scale(3);
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
   text-align: center;
+}
+
+main section article {
+  border-radius: .7em;
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+  margin: 35px auto;
+  width: 80%;
+}
+
+main section article h3 {
+  padding: 5px;
+  color: #eeeeee;
+}
+
+main section article img {
+  max-width: 90%;
+}
+
+main section article p {
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+}
+
+.main-home {
+  height: 1600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-home .page-link {
+  text-align: center;
+  vertical-align: middle;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+  height: 150px;
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: letter-spacing 1s;
+  transition: letter-spacing 1s;
+}
+
+.main-home .page-link:hover {
+  letter-spacing: .5em;
+}
+
+.main-home .page-link p {
+  margin: auto;
+  text-align: center;
+  font-size: 150%;
+}
+
+.main-home .page-link p a {
+  text-decoration: none;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  vertical-align: middle;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+  height: 100px;
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  display: flex;
+  -webkit-transition: letter-spacing 1s;
+  transition: letter-spacing 1s;
+}
+
+footer #icons {
+  width: 200px;
+  margin: auto;
+}
+
+footer #icons a {
+  margin: 0px 10px 0px;
+}
+
+footer #contacts {
+  width: 300px;
+  margin: 0px auto 30px;
+}
+
+footer #contacts a {
+  padding: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  /* Hide Hamburger */
+  #hamnav label,
+  #hamburger {
+    display: none;
+  }
+  /* Horizontal Menu Items */
+  #hamitems {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #hamitems a {
+    width: 16.666%;
+    padding: 10px;
+    color: #eeeeee;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover {
+    background: #c0460d;
+    letter-spacing: .15em;
+    -webkit-transition: letter-spacing .7s;
+    transition: letter-spacing .7s;
+  }
+  main section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main section article {
+    max-width: 45%;
+  }
 }
 /*# sourceMappingURL=paralax.css.map */
