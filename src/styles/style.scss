@@ -140,16 +140,29 @@ header {
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         background: $gradient;
-        text-align: left;
-        img {
-          width: 60%;
-          float: left;
-          padding: 10px;
-          padding-left: 25px;
+
+        div {
+          // text-align: left;
+          padding: 20px;
+          margin-bottom: 20px;
+          img {
+            margin-right: 10px;
+          }
+          p {
+            text-align: left;
+            max-width: 100%;
+          }
+          ol {
+            padding-left: 20px;
+
+            li {
+              text-align: left;
+
+            }
+          }
+
         }
-        p {
-          text-align: left;
-        }
+        
       }
     }
   }
@@ -176,6 +189,21 @@ header {
       }
       .blogpost {
         max-width: 95%;
+        .content {
+          div {
+            img {
+              width: 60%;
+              float: left;
+              padding-right: 10px;
+            }
+            video   {
+              width: 60%;
+              float: left;
+              padding-right: 10px;
+
+            }
+          }
+        }
       }
       #about-me {
         max-width: 75%;

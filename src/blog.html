@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3e7ac28061.js" crossorigin="anonymous"></script>
-
+    <script src="./javascript/script.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <title>Document</title>
     <title>Document</title>
@@ -36,41 +36,336 @@
         </div>
     </header>
     <main class="main-basic">
+        
         <section>
+            <article class="blogpost">
+                <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
+                <div class="content">
+                    <div>
+                        <p>
+                        </p>
+                        <img src="images/cat.jpeg" alt="Cat looking down from above">
+
+                        <p>
+                        </p>
+                        <p>
+
+                        </p>
+                        <p>
+
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                    </div>
+
+
+                </div>
+            </article>
+            <article class="blogpost">
+                <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
+                <div class="content">
+                    <div>
+                        <p>
+                        </p>
+                        <img src="images/cat.jpeg" alt="Cat looking down from above">
+
+                        <p>
+                        </p>
+                        <p>
+
+                        </p>
+                        <p>
+
+                        </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                    </div>
+
+
+                </div>
+            </article>
+            <article class="blogpost">
+                <button class="collapsible">16 Apr 2020: One Two Testing</button>
+                <div class="content">
+                    <div>
+                        <!-- <iframe width="700" height="394" src="https://www.youtube.com/embed/njVMovu9YvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/njVMovu9YvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>
+                            Trying a video this time. Watch the video and then this makes a bit more sense.
+                        </p>
+                        <p>
+                            Test Driven Development (TDD) is what we learned about this week and apparently its important.
+                        </p>
+                        <p>
+                            Sounds crazy but you start with the test data and write the program after that. Well I didn’t know about it and started my program without test data. The good thing is though is that I haven’t finished writing the code and I haven’t actually started the implementation of the AI. So I can start the implementation of the AI with TDD in mind.
+                        </p>
+                        <p>So here goes. Test data for the AI…</p>
+                        <p>In my game of One (based on UNO) written in Ruby, there will be a significant difference between the strategy of an AI for a 2 player game as opposed to three or more players. The reason for this is two cards in the game are ‘skip’ and ‘reverse.’ Skip meaning skip the next players turn and reverse meaning reverse the order of play. In a two player game they both essentially mean whomever plays a skip or reverse gets another go. Not so in a 3 + player game. So the following test data is going to be for a two player game. I’m also going to concentrate on the ‘easy’ setting first. Start simple.</p>
+                        <p>For those not familiar with UNO, the basic concept is the winner is the first person to lose all their cards. Players take it in turn to discard a card onto the discard pile but it has to match one of 4 colours or be the same number as the previous card.</p>
+                        <p>So if you’re interested, here is just some sample hands and what the AI should play given its trying to lose at all costs (easy setting) (according to my best understanding of UNO strategy). I understand that this sample test data is way too small. It’s just an example.</p>
+                        <p>Card decision order for easy setting, 2 players:</p>
+                        <ol>
+                            <li>Play wild pick up 4 or,</li>
+                            <li>Play wild card or,</li>
+                            <li>Play any pickup 2 or,</li>
+                            <li>Play any skip or,</li>
+                            <li>Play any reverse or,</li>
+                            <li>Play any matching number or,</li>
+                            <li>Play matching number of the colour you have the least of or,    </li>
+                            <li>Play matching basic colour with matching number of another colour in hand or,</li>
+                            <li>Play matching basic colour with no matching number of another colour in hand or,</li>
+                            <li>Pick up card from pile (unable to play)</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+            <article class="blogpost">
+                <button class="collapsible">8 Apr 2020: One</button>
+                <div class="content">
+                    <div>
+                        <p>A card game for my son.
+                        </p>
+                        <img src="images/cards.jpeg" alt="Playing cards fanned out on a table">
+
+                        <p>
+                            For the last few weeks, my son Marshall has really taken a shine to the card game Uno. We
+                            play as many games we can fit in before he goes to bed. This has meant that I have become
+                            somewhat of an expert (and so has he).
+                        </p>
+                        <p>
+                            <ol>
+                                <li>
+                                    It’s a fairly simple game as far as strategy goes and it got me thinking that it would
+                                    make it a really good project to try and replicate in code. Obviously, it’s been done
+                                    before. There are several examples of well executed Uno games available online but
+                                    Marshall and I play our own rules slightly differently from the standard rules and we’ve
+                                    now introduced a few custom cards as well. So why not replicate our version? Why not
+                                    indeed.
+                                </li>
+                                <li>
+                                    It will provide me a real world example where I can start to apply my new coding skills.
+                                </li>
+                                <li>
+                                    I can make it more pretty down the line by giving it a snappy GUI.
+                                </li>
+                                <li>
+                                    It’ll (hopefully) impress my son :-)
+                                </li>
+                                <li>
+                                    If I call it “One” maybe I’ll avoid getting sued.
+                                </li>
+                            </ol>
+                        </p>
+                       
+                        <p>So here goes. My only problem here is finding the time to do it in-between classes, coding
+                            practice, assignments, looking after 2 kids, helping out the wife, keeping up the home,
+                            exercise, self care and the rest of life.</p>
+
+                        <p>
+                            Sheesh.
+                        </p>
+                        <p>I’ll keep you updated but here was where I started — an outline. Since blurting all this out,
+                            I’ve learned about classes and its morphed into another version already but this is my
+                            starting point…</p>
+                        <p>ONE</p>
+                        <p>Display rules
+
+                            function create deck
+
+                            create array of 108 cards called deck
+
+                            each containing a hash card {colour: red, number: 7}
+
+                            either [colour, number] or [colour, skip] [colour, rev] [colour, pickup_2]
+
+                            or special cards -
+
+                            [anycolour, null] or [anycolour, pickup_4]
+
+                            Determine number of players and make array turn_order [player_1, player_2, etc]
+
+                            create profiles — player_1_info = hash {type: human/computer, difficulty: easy}
+
+                            Difficulty?
+
+                            function Deal Cards
+
+                            Take cards (each hash out of the deck array and into the hands arrays (1 hand array eg
+                            player_1_hand for each player containing 7 random card hashes)
+
+                            example — player_1_hand = [{red, 7},{blue, 5}, {anycolour, null}, {yellow, pickup_2}, {red,
+                            0}
+
+                            take random valid card from deck array and use it to start the discard array
+
+                            top_card_number = number from card chosen
+
+                            top_card_colour = colour from card chosen
+
+                            function Human interface
+
+                            show human their player_1_hand
+
+                            input from human — card to play
+
+                            ensure it follows turn logic
+
+                            function Turn logic
+
+                            if pickup_2 give 2 cards to next player in turn_order unless they have a pickup_2 also.
+
+                            if pickup_4 give 4 cards to next player in turn_order unless they have a pickup_4 also.
+
+                            only allow same colour or anycolour or same number/skip/reverse/pickup_2
+
+                            add card to discard array
+
+                            delete card from hand array
+
+                            if current_player hand array is empty, current_player is the winner
+
+                            if skip played, move next player in turn_order array to end
+
+                            if rev, reverse turn_order array
+
+                            if anycolour, ask player to choose colour and assign to top_card_colour
+
+                            if current_player hand array has only one card left output “ONE!”
+
+                            function Computer strategy hard?
+
+                            try to play colour first, if more than one choice, choose the card with a number not
+                            repeated in the hand array, if has pickup_2, save till last card
+
+                            if no colour, play same number
+
+                            if no colour or number, play anycolour and change colour to the colour most prevelent in
+                            hand array</p>
+
+                    </div>
+
+
+                </div>
+            </article>
+            
+            <article class="blogpost">
+                <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
+                <div class="content">
+                    <div>
+                        <p>
+                            Firstly, don’t get me wrong, we have a cat, I love cats. She’s old and she throws up every
+                            second day but I would never hurt her. I’ve seen what the internet does to people who #$%*
+                            with cats…
+                        </p>
+                        <img src="images/cat.jpeg" alt="Cat looking down from above">
+
+                        <p>
+                            I am of course referring to the expression “There’s more than one way to skin a cat.” And
+                            we’re talking about Ruby code here. You could even Rubify it (if that’s a word) — “There’s
+                            more than one way to cut a Ruby.” It could also apply to other languages too… “There’s more
+                            than one way to catch a Python.” or “There’s more than one way to brew Java.” or even
+                            “There’s more than one way to swim in the C++…” I can hear the groans but hey, I’m a Dad.
+                            I’m allowed. But especially in Ruby, there’s more than one way to do things.
+                        </p>
+                        <p>
+                            But I hear you saying that’s all well and good but what has it got to do with Elsa? Well in
+                            the movie Frozen…
+                        </p>
+                        <p>
+                            — -SPOILER ALERT — -
+                        </p>
+                        <p>Anna has her heart frozen accidentally by her sister Elsa. Then we learn from a troll that
+                            “Love will thaw a frozen heart.” We are then led to believe (from the romantic story arc of
+                            Anna and Kristoff) that Kristoff will come to the rescue and save Anna by kissing her. But
+                            no — there’s a plot twist and Anna ends up sacrificing herself to save Elsa’s life. Her act;
+                            motivated by the love of her sister thawed her own frozen heart. Cool. There’s more than one
+                            way to thaw a frozen heart. You go girl.</p>
+                        <p>— -SPOILER ALERT — -</p>
+                        <p>When I looked back at my day last night, I got behind in my coding and I asked myself why?
+                            The answer was ,that I got caught up with a bit of code that I wanted to write a particular
+                            way. And I didn’t let it go. I was like a dog with a bone. A toddler with a square peg,
+                            desperately trying to jam the thing into a round hole. I’ll just try running it again and
+                            see if it works now. Now that I’ve stared at it for 5 minutes. Surely, now, it will work.
+                            The definition of insanity is to do the same thing and expect different results. I was
+                            insane.</p>
+                        <p>I needed to take a coding lesson from Elsa… Let it go. Let it go. There’s more than one way
+                            to skin a cat. Ruby is a very versatile language. Find another way. It may not be the way
+                            you envisioned, but it will work. Move on. Because let’s be honest folks, when is time not a
+                            factor?</p>
+                        <p>Now, I’m sure there is some value in keeping at it. Persistence. Determination. You will be
+                            learning stuff regardless. But mostly you’ll be learning a lesson in frustration. There’s a
+                            fine line between giving something a decent go and having 40 tabs open on the same subject
+                            an hour later. It’s a balancing act for sure.</p>
+                        <p>I would love to get your opinions on this fellow developers and budding developers so please
+                            share your thoughts.</p>
+
+
+                    </div>
+
+
+                </div>
+            </article>
             <article class="blogpost">
                 <button class="collapsible">28 Mar 2020: Making the leap</button>
                 <div class="content">
                     <div>
-                    <img src="images/ubuntu.jpeg" alt="Laptop with ubuntu logo on the screen">
-                    <p>After my first week of coder academy, I was introduced to the command line. Pretty cool stuff but
-                        it doesn’t come naturally to Windows.
-                    </p>
-                    <p>The good people at my Coder Academy course suggested running a virtual machine to run Linux.
-                        Sounds like a reasonable idea. However while attempting to install Ubuntu onto my laptop, on a
-                        virtual box, I ran into some problems. The keyboard refused to work half way into the install.
-                        After trawling the internet for solutions, I came across a few people with the same issues.
-                        Unfortunately none of the solutions seemed to be getting me anywhere. But then I thought outside
-                        the box… what do I do with windows on this laptop, that I wouldn’t be able to do with Linux? Why
-                        do I need Windows at all?
-                    </p>
-                    <p>This is going to be my developer computer. I’m not going to play any games on it. I’ve got my
-                        desktop computer anyway… what can’t I do on Linux?</p>
+                        <img src="images/ubuntu.jpeg" alt="Laptop with ubuntu logo on the screen">
+                        <p>After my first week of coder academy, I was introduced to the command line. Pretty cool stuff
+                            but
+                            it doesn’t come naturally to Windows.
+                        </p>
+                        <p>The good people at my Coder Academy course suggested running a virtual machine to run Linux.
+                            Sounds like a reasonable idea. However while attempting to install Ubuntu onto my laptop, on
+                            a
+                            virtual box, I ran into some problems. The keyboard refused to work half way into the
+                            install.
+                            After trawling the internet for solutions, I came across a few people with the same issues.
+                            Unfortunately none of the solutions seemed to be getting me anywhere. But then I thought
+                            outside
+                            the box… what do I do with windows on this laptop, that I wouldn’t be able to do with Linux?
+                            Why
+                            do I need Windows at all?
+                        </p>
+                        <p>This is going to be my developer computer. I’m not going to play any games on it. I’ve got my
+                            desktop computer anyway… what can’t I do on Linux?</p>
 
-                    <p>Nothing.</p>
+                        <p>Nothing.</p>
 
-                    <p>I. Don’t. Need. Windows.</p>
+                        <p>I. Don’t. Need. Windows.</p>
 
-                    <p>The realisation was very satisfying. So that’s it. I’m giving Windows the flick. Googling issues
-                        that people have had installing Ubuntu on my Lenovo Z570 came up with a couple of issues with
-                        the wifi and graphics card driver but we’ll see if they rear their ugly heads.
-                        <em>I’m doing this.</em></p>
+                        <p>The realisation was very satisfying. So that’s it. I’m giving Windows the flick. Googling
+                            issues
+                            that people have had installing Ubuntu on my Lenovo Z570 came up with a couple of issues
+                            with
+                            the wifi and graphics card driver but we’ll see if they rear their ugly heads.
+                            <em>I’m doing this.</em></p>
 
-                    <p>Ok. Skip ahead an hour or so and here we are. No issues. Works perfectly. Love the Gnome GUI but
-                        I’m looking forward to familiarising myself with the terminal interface even more. I think I’m
-                        now officially a Linux/Ubuntu fanboi. That didn’t take long did it?</p>
+                        <p>Ok. Skip ahead an hour or so and here we are. No issues. Works perfectly. Love the Gnome GUI
+                            but
+                            I’m looking forward to familiarising myself with the terminal interface even more. I think
+                            I’m
+                            now officially a Linux/Ubuntu fanboi. That didn’t take long did it?</p>
 
-                    <p>Bye Windows. You won’t be missed.</p>
-                </div>
+                        <p>Bye Windows. You won’t be missed.</p>
+                    </div>
 
 
                 </div>
@@ -79,40 +374,47 @@
                 <button class="collapsible">25 Mar 2020: My Coding Journey Starts Here</button>
                 <div class="content">
                     <div>
-                    <br>
-                    <p>I keep thinking back to ‘Monty Python’s and Holy Grail’ and the line
-                        “I’m 37, I’m not old!”
-                    </p>
-                    <img src="images/headshot.png" alt="Headshot Jason Stacy">
-                    <p>Well I’m 47 but I still think that I’m not old. My young children may disagree but I don’t care.
-                        And this is why I’ve decided to start a new career as a Web Developer.
+                        <br>
+                        <p>I keep thinking back to ‘Monty Python’s and Holy Grail’ and the line
+                            “I’m 37, I’m not old!”
+                        </p>
+                        <img src="images/headshot.png" alt="Headshot Jason Stacy">
+                        <p>Well I’m 47 but I still think that I’m not old. My young children may disagree but I don’t
+                            care.
+                            And this is why I’ve decided to start a new career as a Web Developer.
+                        </p>
+                        <p>It all started when I was talking to a friend who is a developer, he mentioned that they had
+                            hired some people straight out of some coding boot-camps… Interesting.</p>
 
-                        It all started when I was talking to a friend who is a developer, he mentioned that they had
-                        hired some people straight out of some coding boot-camps… Interesting.
+                        <p> Maybe I could do this? After all, I’m not a stranger to coding. I’ve done a couple of
+                            websites
+                            and learned some stuff online. I started investigating boot-camps and I liked the look of
+                            Coder
+                            Academy.</p>
+                        <p>The thing that stood out for me and ended up tipping the scales was the fact that the course
+                            was
+                            accredited. At the end of it, I would have a diploma in IT if nothing else. My journey was
+                            taking shape.</p>
 
-                        Maybe I could do this? After all, I’m not a stranger to coding. I’ve done a couple of websites
-                        and learned some stuff online. I started investigating boot-camps and I liked the look of Coder
-                        Academy.
-                        The thing that stood out for me and ended up tipping the scales was the fact that the course was
-                        accredited. At the end of it, I would have a diploma in IT if nothing else. My journey was
-                        taking shape.
+                        <p>After applying, I found out they have a diversity scholarship. Me having one leg and all, I
+                            thought why not give it a go right? And what do you know? I got it! My journey started with
+                            a
+                            Sherpa!</p>
 
-                        After applying, I found out they have a diversity scholarship. Me having one leg and all, I
-                        thought why not give it a go right? And what do you know? I got it! My journey started with a
-                        Sherpa!
+                        <p>Unfortunately, Covid 19 reared its ugly head and a course that was meant to be face to face
+                            suddenly turned online.</p>
+                        <p>Kudos to the Coder Academy team though. Hey, If anyone can transform a course to an online
+                            experience in less than a week it’s going to be them.</p>
 
-                        Unfortunately, Covid 19 reared its ugly head and a course that was meant to be face to face
-                        suddenly turned online.
 
-                        Kudos to the Coder Academy team though. Hey, If anyone can transform a course to an online
-                        experience in less than a week it’s going to be them.
+                        <p>Unfortunately, my back has given out again and I’m trying to learn while horizontal. It’s not
+                            ideal but hopefully things will improve shortly.</p>
 
-                        Unfortunately, my back has given out again and I’m trying to learn while horizontal. It’s not
-                        ideal but hopefully things will improve shortly.
-                        So here I am, just finished the first week and have an inkling of Command Line and a smidge of
-                        Ruby but am super excited and have a thirst for more. Stay tuned.
-                    </p>
-                </div>
+                        <p>So here I am, just finished the first week and have an inkling of Command Line and a smidge
+                            of
+                            Ruby but am super excited and have a thirst for more. Stay tuned.</p>
+
+                    </div>
                 </div>
             </article>
         </section>
@@ -131,7 +433,7 @@
             <a href="jason@jasonstacy.com.au">jason@jasonstacy.com.au</a>
         </div>
     </footer>
-    <script src="./javascript/script.js"></script>
+
 </body>
 
 </html>

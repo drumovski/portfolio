@@ -31,13 +31,6 @@ body {
 }
 
 .parallax {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-perspective: 1px;
           perspective: 1px;
   height: 100vh;
@@ -64,19 +57,12 @@ body {
 }
 
 .parallax__layer--forward {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
-  height: 250%;
+  min-height: 250%;
 }
 
 .parallax__layer--back-home {
@@ -289,17 +275,27 @@ header .title-box h1 {
   transition: max-height 0.2s ease-out;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
   background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+}
+
+.main-basic section .blogpost .content div {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.main-basic section .blogpost .content div img {
+  margin-right: 10px;
+}
+
+.main-basic section .blogpost .content div p {
   text-align: left;
+  max-width: 100%;
 }
 
-.main-basic section .blogpost .content img {
-  width: 60%;
-  float: left;
-  padding: 10px;
-  padding-left: 25px;
+.main-basic section .blogpost .content div ol {
+  padding-left: 20px;
 }
 
-.main-basic section .blogpost .content p {
+.main-basic section .blogpost .content div ol li {
   text-align: left;
 }
 
@@ -423,6 +419,16 @@ footer #contacts a {
   }
   .main-basic section .blogpost {
     max-width: 95%;
+  }
+  .main-basic section .blogpost .content div img {
+    width: 60%;
+    float: left;
+    padding-right: 10px;
+  }
+  .main-basic section .blogpost .content div video {
+    width: 60%;
+    float: left;
+    padding-right: 10px;
   }
   .main-basic section #about-me {
     max-width: 75%;

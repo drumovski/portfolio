@@ -12,8 +12,6 @@
 
 @mixin paralax {
   .parallax {
-    display: flex;
-    flex-direction: column;
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
@@ -34,11 +32,9 @@
   }
 
   .parallax__layer--forward {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     transform: translateZ(0);
-    height: 250%;
+    min-height: 250%;
   }
 
   .parallax__layer--back-home {
