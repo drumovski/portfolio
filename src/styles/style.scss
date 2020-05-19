@@ -112,10 +112,22 @@ header {
 // About me page article styling
 #about-me {
   width: 90%;
-    img {
-      float: left;
-      width: 50%;
+  .video-container  {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+  }
+  p {
+    text-align: left;
+  }
 }
 
 // Blog page article styling
@@ -215,6 +227,11 @@ header {
       }
       #about-me {
         max-width: 75%;
+          .video-container {
+            width: 60%;
+            float: left;
+            margin-right: 20px;
+          }
       } 
     }
   }
