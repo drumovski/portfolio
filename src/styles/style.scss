@@ -8,6 +8,8 @@
 @include paralax; //only for home screen - paralax effect
 @include nav; // navigation bar including hamburger/dropdown menu
 
+
+
 // Different background images for each page
 .web-body {
   background-image: url("../images/web.jpg");
@@ -79,6 +81,7 @@ header {
   margin: auto;
   text-align: center;
 
+
   section {
 
     article {
@@ -106,6 +109,7 @@ header {
     }
   }
 }
+// About me page article styling
 #about-me {
   width: 90%;
     img {
@@ -113,6 +117,45 @@ header {
       width: 50%;
     }
 }
+
+// Blog page article styling
+.collapsible {
+  background: $gradient;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+.main-basic {
+  section {
+    .blogpost {
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background: $gradient;
+        text-align: left;
+        img {
+          width: 60%;
+          float: left;
+          padding: 10px;
+          padding-left: 25px;
+        }
+        p {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+
 
 @include main-home; // home page main content has different styling from the rest
 
@@ -130,6 +173,9 @@ header {
 
       article {
         max-width: 45%;
+      }
+      .blogpost {
+        max-width: 95%;
       }
       #about-me {
         max-width: 75%;

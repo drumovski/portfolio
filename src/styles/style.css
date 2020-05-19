@@ -17,7 +17,17 @@ body {
   -o-background-size: cover;
   background-position: top;
   background-attachment: fixed;
-  height: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .parallax {
@@ -75,7 +85,7 @@ body {
   background-image: url("/src/images/home.jpg");
   background-size: cover;
   background-position: top;
-  height: 200%;
+  min-height: 200%;
 }
 
 #hamnav label {
@@ -257,6 +267,42 @@ header .title-box h1 {
   width: 50%;
 }
 
+.collapsible {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.main-basic section .blogpost .content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
+  background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
+  text-align: left;
+}
+
+.main-basic section .blogpost .content img {
+  width: 60%;
+  float: left;
+  padding: 10px;
+  padding-left: 25px;
+}
+
+.main-basic section .blogpost .content p {
+  text-align: left;
+}
+
 .main-home {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -270,7 +316,6 @@ header .title-box h1 {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
 }
 
 .main-home .page-link {
@@ -279,6 +324,7 @@ header .title-box h1 {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(53, 53, 53, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(53, 53, 53, 0.82)));
   background: linear-gradient(180deg, rgba(53, 53, 53, 0.82) 0%, black 45%, black 55%, rgba(53, 53, 53, 0.82) 100%);
   height: 100px;
+  margin-top: 50px;
   -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
           box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
   display: -webkit-box;
@@ -374,6 +420,9 @@ footer #contacts a {
   }
   .main-basic section article {
     max-width: 45%;
+  }
+  .main-basic section .blogpost {
+    max-width: 95%;
   }
   .main-basic section #about-me {
     max-width: 75%;
