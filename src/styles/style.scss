@@ -126,10 +126,11 @@ header {
   width: 100%;
   border: none;
   text-align: center;
+  transition: letter-spacing 1s;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  letter-spacing: .1em;
 }
 .main-basic {
   section {
@@ -139,7 +140,7 @@ header {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        background: $gradient;
+        // background: $gradient;
 
         div {
           // text-align: left;
@@ -160,7 +161,19 @@ header {
 
             }
           }
+          .video-container  {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
 
+            iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
         
       }
@@ -196,12 +209,7 @@ header {
               float: left;
               padding-right: 10px;
             }
-            video   {
-              width: 60%;
-              float: left;
-              padding-right: 10px;
 
-            }
           }
         }
       }

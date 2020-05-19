@@ -23,7 +23,7 @@
                 <a href="index.html">Home</a>
                 <a href="web.html">Web Dev</a>
                 <a href="code.html">Code</a>
-                <a href="about_me.html">About Me</a>
+                <a href="aboutme.html">About Me</a>
                 <a href="resume.html">Resume</a>
                 <a href="blog.html">Blog</a>
             </div>
@@ -36,34 +36,53 @@
         </div>
     </header>
     <main class="main-basic">
-        
+
         <section>
             <article class="blogpost">
-                <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
+                <button class="collapsible">11 May 2020: One AI Done… Mostly.</button>
                 <div class="content">
                     <div>
-                        <p>
+                        <p>On my Ruby Uno clone called One…
                         </p>
-                        <img src="images/cat.jpeg" alt="Cat looking down from above">
+                        <img src="images/robot.jpeg" alt="Futuristic robot in virtual background">
 
-                        <p>
+                        <p>I've now completed the AI part of the project. There were some bits that were harder than
+                            others and some bits that were easier. I also managed to include the full functionality of
+                            the previous version so now you can play a pickup 2 over the top of another pickup 2 (same
+                            with pickup 4).
                         </p>
                         <p>
+                            I think the hardest part of designing the AI was figuring out how to start. I wrote and
+                            rewrote pages of pseudo code and diagrams over and over. It wasn’t until I actually started
+                            coding properly that I had the ah-ha moment and figured out how to do it reasonably
+                            concisely. I’ve got 3 difficulty levels. The easy setting actively tries to lose, the medium
+                            setting is random and the hard setting actively tries to win. The middle difficulty was by
+                            far the easiest — randomly picking a card from the available options. One line of code and I
+                            was done.
+                        </p>
+                        <p>
+                            Its kind of disheartening when I get the computer to play itself and the random one wins…
+                        </p>
+                        <p>The hardest one was the hard setting. Sounds pretty obvious doesn’t it.</p>
+                        <p>I wanted to assess the card to play based on a score of the final hand after that card was
+                            played but I realised that it was a lot simpler to give the cards a score and choose based
+                            on that rather than calculating a score for the entire hand.</p>
+                        <p>The easy difficulty was easy once the hard was done because it just required copying, pasting
+                            and then changing one line of code from a greater than symbol to a less than symbol. I could
+                            have put in some more subtle additions to the AI decision making but I wasn’t even sure if
+                            it would make it that much better and it would have been a lot of coding for very little
+                            result.</p>
+                        <p>So the guts of the AI card scoring for the hard setting I can't really show you but once all
+                            the possible cards
+                            are scored, the computer simply chooses the highest value and plays that.</p>
 
+                        <p>There is a bunch more if statements than I wanted but in the end it was hard to avoid them.
                         </p>
-                        <p>
+                        <p>Left to do: getting the computer to play itself automatically, a set number of times and
+                            record the percentages of wins for each level of difficulty. Might have to leave this for
+                            another day. Please download and enjoy the game as it is here: </p>
+                        <a href="https://github.com/drumovski/One"></a>
 
-                        </p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
 
                     </div>
 
@@ -71,29 +90,78 @@
                 </div>
             </article>
             <article class="blogpost">
-                <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
+                <button class="collapsible">3 May 2020: AI and the One</button>
                 <div class="content">
                     <div>
-                        <p>
-                        </p>
-                        <img src="images/cat.jpeg" alt="Cat looking down from above">
+
+                        <img src="images/matrix.png" alt="Neo from Matrix with green digital effect background">
 
                         <p>
+                            Just as Keanu was the One, so is my Ruby Uno program called One. The human player side is
+                            done, I’ve refactored the code into a more OOP style and brought back all the functionality
+                            of my original program. Now its time to have some real fun.
                         </p>
                         <p>
-
+                            I’m dipping my toe into the matrix for the first time and creating an AI. Three actually.
                         </p>
                         <p>
+                            I figure I can go about this AI two ways. The first by creating a bunch of ‘if’ statements
+                            such that - if you have the option of a matching colour or number, choose the colour etc
+                            etc. This is a perfectly feasible way of decision making. However, it‘s going to be hard to
+                            change and its not as cool as the second option, which I’m going to try.
+                        </p>
+                        <p>The second option is to assign a numeric score to the cards and have the AI choose the card
+                            to play based on how many points it will have after playing the card. There will be base
+                            points each card will have plus additional points based on the whole hand. For instance,
+                            points will be awarded for having a card with the same number in another colour. If the AI
+                            has a choice of a red 5 and a red 7, and there is also a green 7 in the hand, it should
+                            choose the red 5 because it can switch colours from red to green with the 7 once the reds
+                            have run out (if the opponent draws a card). Theoretically, it should work. There is also
+                            another up side to this way of ‘thinking’. It’s easily tweaked. I can mess around with the
+                            values and see if I can get the AI to play ‘smarter’.</p>
+                        <p>Eventually, I would like to add functionality to have the computer play itself in various
+                            levels of difficulty over and over and spit out a percentage of wins/losses at the end. This
+                            way I can really test the validity of certain strategies and card values.</p>
+                        <p>So here’s what I’m thinking for the card scores and rules. The AI will try and get the lowest
+                            score it can each time it plays a card. This is the starting point for the hardest level of
+                            difficulty assuming 2 players:</p>
+                        <p>Basic colour +70 (-1 for every matching number of another colour)
+
+                            Skip +50 (-1 for every other skip)
+
+                            Reverse +50 (-1 for every other reverse)
+
+                            Pickup2 +40 (+1 for every other PU2)
+
+                            Pickup4 +20
+
+                            Wild +30
+
+                            Hand rules:
+
+                            Every different colour in hand+20
+
+                            If next opponent cards < 3=> Pickup 2 +100, Pickup 4 +100</p>
+                        <p>Two exceptions to the score method will be:
 
                         </p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <ol>
+                            <li>
+                                If opponent has 1 card remaining and they just played a wild (changing the colour), play
+                                a wild if you have one and change colour again.
+                            </li>
+                            <li>
+                                If you can only play a wild, and wild cards ≤ number of different colours in hand, draw
+                                a card.
+                            </li>
+                        </ol>
+                        <p>The theory is with all these scores is that the computer will assess the score it will get
+                            after playing each card it is allowed to. Then choose the card resulting in the lowest score
+                            it will have after playing that card.</p>
+                        <p>There will be three levels of difficulty. The scores above will be for the hardest. The
+                            easiest will be basically the opposite. The computer will actively try and lose. And the
+                            middle level will be choosing a random card.</p>
+                        <p>Now to code it all. Wish me luck.</p>
                         <p></p>
                         <p></p>
 
@@ -106,21 +174,38 @@
                 <button class="collapsible">16 Apr 2020: One Two Testing</button>
                 <div class="content">
                     <div>
-                        <!-- <iframe width="700" height="394" src="https://www.youtube.com/embed/njVMovu9YvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/njVMovu9YvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-container">
+                            <iframe width="420" height="315" src="https://www.youtube.com/embed/njVMovu9YvY"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
                         <p>
                             Trying a video this time. Watch the video and then this makes a bit more sense.
                         </p>
                         <p>
-                            Test Driven Development (TDD) is what we learned about this week and apparently its important.
+                            Test Driven Development (TDD) is what we learned about this week and apparently its
+                            important.
                         </p>
                         <p>
-                            Sounds crazy but you start with the test data and write the program after that. Well I didn’t know about it and started my program without test data. The good thing is though is that I haven’t finished writing the code and I haven’t actually started the implementation of the AI. So I can start the implementation of the AI with TDD in mind.
+                            Sounds crazy but you start with the test data and write the program after that. Well I
+                            didn’t know about it and started my program without test data. The good thing is though is
+                            that I haven’t finished writing the code and I haven’t actually started the implementation
+                            of the AI. So I can start the implementation of the AI with TDD in mind.
                         </p>
                         <p>So here goes. Test data for the AI…</p>
-                        <p>In my game of One (based on UNO) written in Ruby, there will be a significant difference between the strategy of an AI for a 2 player game as opposed to three or more players. The reason for this is two cards in the game are ‘skip’ and ‘reverse.’ Skip meaning skip the next players turn and reverse meaning reverse the order of play. In a two player game they both essentially mean whomever plays a skip or reverse gets another go. Not so in a 3 + player game. So the following test data is going to be for a two player game. I’m also going to concentrate on the ‘easy’ setting first. Start simple.</p>
-                        <p>For those not familiar with UNO, the basic concept is the winner is the first person to lose all their cards. Players take it in turn to discard a card onto the discard pile but it has to match one of 4 colours or be the same number as the previous card.</p>
-                        <p>So if you’re interested, here is just some sample hands and what the AI should play given its trying to lose at all costs (easy setting) (according to my best understanding of UNO strategy). I understand that this sample test data is way too small. It’s just an example.</p>
+                        <p>In my game of One (based on UNO) written in Ruby, there will be a significant difference
+                            between the strategy of an AI for a 2 player game as opposed to three or more players. The
+                            reason for this is two cards in the game are ‘skip’ and ‘reverse.’ Skip meaning skip the
+                            next players turn and reverse meaning reverse the order of play. In a two player game they
+                            both essentially mean whomever plays a skip or reverse gets another go. Not so in a 3 +
+                            player game. So the following test data is going to be for a two player game. I’m also going
+                            to concentrate on the ‘easy’ setting first. Start simple.</p>
+                        <p>For those not familiar with UNO, the basic concept is the winner is the first person to lose
+                            all their cards. Players take it in turn to discard a card onto the discard pile but it has
+                            to match one of 4 colours or be the same number as the previous card.</p>
+                        <p>So if you’re interested, here is just some sample hands and what the AI should play given its
+                            trying to lose at all costs (easy setting) (according to my best understanding of UNO
+                            strategy). I understand that this sample test data is way too small. It’s just an example.
+                        </p>
                         <p>Card decision order for easy setting, 2 players:</p>
                         <ol>
                             <li>Play wild pick up 4 or,</li>
@@ -129,7 +214,7 @@
                             <li>Play any skip or,</li>
                             <li>Play any reverse or,</li>
                             <li>Play any matching number or,</li>
-                            <li>Play matching number of the colour you have the least of or,    </li>
+                            <li>Play matching number of the colour you have the least of or, </li>
                             <li>Play matching basic colour with matching number of another colour in hand or,</li>
                             <li>Play matching basic colour with no matching number of another colour in hand or,</li>
                             <li>Pick up card from pile (unable to play)</li>
@@ -151,30 +236,30 @@
                             somewhat of an expert (and so has he).
                         </p>
                         <p>
-                            <ol>
-                                <li>
-                                    It’s a fairly simple game as far as strategy goes and it got me thinking that it would
-                                    make it a really good project to try and replicate in code. Obviously, it’s been done
-                                    before. There are several examples of well executed Uno games available online but
-                                    Marshall and I play our own rules slightly differently from the standard rules and we’ve
-                                    now introduced a few custom cards as well. So why not replicate our version? Why not
-                                    indeed.
-                                </li>
-                                <li>
-                                    It will provide me a real world example where I can start to apply my new coding skills.
-                                </li>
-                                <li>
-                                    I can make it more pretty down the line by giving it a snappy GUI.
-                                </li>
-                                <li>
-                                    It’ll (hopefully) impress my son :-)
-                                </li>
-                                <li>
-                                    If I call it “One” maybe I’ll avoid getting sued.
-                                </li>
-                            </ol>
+                        <ol>
+                            <li>
+                                It’s a fairly simple game as far as strategy goes and it got me thinking that it would
+                                make it a really good project to try and replicate in code. Obviously, it’s been done
+                                before. There are several examples of well executed Uno games available online but
+                                Marshall and I play our own rules slightly differently from the standard rules and we’ve
+                                now introduced a few custom cards as well. So why not replicate our version? Why not
+                                indeed.
+                            </li>
+                            <li>
+                                It will provide me a real world example where I can start to apply my new coding skills.
+                            </li>
+                            <li>
+                                I can make it more pretty down the line by giving it a snappy GUI.
+                            </li>
+                            <li>
+                                It’ll (hopefully) impress my son :-)
+                            </li>
+                            <li>
+                                If I call it “One” maybe I’ll avoid getting sued.
+                            </li>
+                        </ol>
                         </p>
-                       
+
                         <p>So here goes. My only problem here is finding the time to do it in-between classes, coding
                             practice, assignments, looking after 2 kids, helping out the wife, keeping up the home,
                             exercise, self care and the rest of life.</p>
@@ -265,7 +350,7 @@
 
                 </div>
             </article>
-            
+
             <article class="blogpost">
                 <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
                 <div class="content">
