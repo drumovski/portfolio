@@ -127,6 +127,7 @@ body {
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
+  position: absolute;
 }
 
 header .title-box-home {
@@ -303,7 +304,8 @@ header .title-box h1 {
   transition: letter-spacing 1s;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   letter-spacing: .1em;
 }
 

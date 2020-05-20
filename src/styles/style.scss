@@ -3,25 +3,34 @@
 @import 'partials/_mixins';
 
 
+
+
 @include initialize; //basic styleguides for all pages
 @include paralax; //only for home screen - paralax effect
 @include nav; // navigation bar including hamburger/dropdown menu
 
 
 
+
 // Different background images for each page
 .web-body {
   background-image: url("../images/web.jpg");
+
 }
+
 .code-body {
   background-image: url("../images/code.jpg");
-} 
+}
+
 .aboutme-body {
   background-image: url("../images/aboutme.jpg");
 }
+
 .blog-body {
   background-image: url("../images/blog.jpg");
 }
+
+
 
 
 // Styling for background images to remain fixed (except home page)
@@ -29,38 +38,43 @@ body {
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
+  position: absolute;
 }
+
+
 
 
 // All title boxes for home and other pages
 header {
+  .title-box-home {    //Home page title box
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
+    margin: 5% 0% 10% 30%;
+    text-align: center;
+    border-radius: .3em;
+    animation-name: fade-in;
+    animation-duration: 4s; // title box fade in when landing on home page
 
-  .title-box-home {  //Home page title box
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
-  margin: 5% 0% 10% 30%;
-  text-align: center;
-  border-radius: .3em;
-  animation-name: fade-in;
-  animation-duration: 4s; // title box fade in when landing on home page
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
 
-  @keyframes fade-in {
-    from {opacity: 0;}
-    to {opacity: 1;}
+      to {
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      font-size: 2rem;
+      letter-spacing: 0.5em;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
   }
 
-  h1 {
-    font-size: 2rem;
-    letter-spacing: 0.5em;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-}
-
-
-    //basic pages title boxes
-  .title-box {
+  .title-box {    //basic pages title boxes
     background: $gradient;
     box-shadow: $box-shadow;
     width: 300px;
@@ -76,6 +90,8 @@ header {
 }
 
 
+
+
 // home page main content - has different styling from the other pages
 .main-home {
   flex-grow: 1;
@@ -83,7 +99,7 @@ header {
   flex-direction: column;
   justify-content: space-around;
 
-  .page-link { // boxes containing the links for the other pages
+  .page-link {    // boxes containing the links for the other pages
     text-align: center;
     vertical-align: middle;
     background: $gradient;
@@ -91,21 +107,25 @@ header {
     margin-top: 50px;
     box-shadow: $box-shadow;
     display: flex;
-    transition: letter-spacing 1s;  // letters disperse when hovered over
+    transition: letter-spacing 1s; // letters disperse when hovered over
 
     &:hover {
       letter-spacing: .5em;
     }
+
     h3 {
       margin: auto;
       text-align: center;
-       font-size: 1.5em;
+      font-size: 1.5em;
+
       a {
         text-decoration: none;
       }
     }
   }
 }
+
+
 
 
 // Sytling for all pages except the home page
@@ -116,36 +136,40 @@ header {
   margin: auto;
   text-align: center;
 
-    article {
-      border-radius: .7em;
-      box-shadow: $box-shadow;
-      background: $gradient;
-      margin: 35px auto;
-      width: 80%;
+  article {
+    border-radius: .7em;
+    box-shadow: $box-shadow;
+    background: $gradient;
+    margin: 35px auto;
+    width: 80%;
 
-      h3 {
-        padding: 5px;
-      }
-
-      img {
-        max-width: 90%;
-      }
-
-      p {
-        max-width: 90%;
-        margin: auto;
-      }
+    h3 {
+      padding: 5px;
     }
+
+    img {
+      max-width: 90%;
+    }
+
+    p {
+      max-width: 90%;
+      margin: auto;
+    }
+  }
 }
+
+
 
 
 // About me page styling
 #about-me {
   width: 90%;
 
-  .video-container  {  // container to make video responsive
+  .video-container {
+    // container to make video responsive
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0;
 
     iframe {
@@ -164,8 +188,10 @@ header {
 }
 
 
+
+
 // Blog page styling
-.collapsible {
+.collapsible {  // Blog headings
   border-radius: .7em;
   background: $gradient;
   cursor: pointer;
@@ -175,179 +201,105 @@ header {
   transition: letter-spacing 1s;
 }
 
-.active, .collapsible:hover {
-  letter-spacing: .1em;
+.active,
+.collapsible:hover {
+  letter-spacing: .1em;  // letters disperse when hovered over
 }
 
 .main-basic {
-      // Larger container for each blog post
-    .blogpost {
+  .blogpost {       // Larger container for each blog post  
+
+    .content {
       // Drop down container
-      .content {
-        padding: 0 18px;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
 
+      div {
         // Additional container for drop down content to line up elements
-        div {
-          padding: 20px;
-          margin-bottom: 20px;
-          img {
-            margin-right: 10px;
-          }
-          p {
+        padding: 20px;
+        margin-bottom: 20px;
+
+        img {
+          margin-right: 10px;
+        }
+
+        p {
+          text-align: left;
+          max-width: 100%;
+        }
+
+        ol {
+          padding-left: 20px;
+
+          li {
             text-align: left;
-            max-width: 100%;
           }
-          ol {
-            padding-left: 20px;
+        }
 
-            li {
-              text-align: left;
-            }
-          }
-          .video-container  {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
+        .video-container {
+          // container to make video responsive
+          position: relative;
+          padding-bottom: 56.25%;
+          /* 16:9 */
+          height: 0;
 
-            iframe {
-              position: absolute;
-              border: none;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-            }
+          iframe {
+            position: absolute;
+            border: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
           }
         }
       }
     }
+  }
 }
 
 
 @include footer;
 
 
-
 // Tablet and above size
 @media screen and (min-width: 600px) {
-  @include drop-down-menu;
+  @include drop-down-menu; // Navigation menu becomes row
 
   .main-basic {
+    // multiple columns when size is big enough - applies to web and code pages
     flex-wrap: wrap;
     flex-direction: row;
 
+    article {
+      max-width: 45%;
+    }
+    //styling for larger screens on blog page
+    .blogpost {
+      // needs to be large or dropdown doesn't work
+       max-width: 95%;
 
-      article {
-        max-width: 45%;
-      }
-      .blogpost {
-        max-width: 95%;
-        .content {
-          div {
-            img {
-              width: 60%;
-              float: left;
-              padding-right: 10px;
-            }
-
+      .content {
+        div {
+          img {
+            width: 60%;
+            float: left;
+            padding-right: 10px;
           }
         }
       }
-      #about-me {
-        max-width: 75%;
-          .video-container {
-            width: 60%;
-            float: left;
-            margin-right: 20px;
-          }
-      } 
+    }
+
+    //styling for larger screens on about me page - video box floats left
+    #about-me {   
+      max-width: 75%;
+
+      .video-container {  
+        width: 60%;
+        float: left;
+        margin-right: 20px;
+      }
+    }
   }
 }
-
-
-
-
-
-
-
-// @import 'partials/_fonts';
-// @import 'partials/_variables';
-// @import 'partials/_mixins';
-
-
-// @include initialize;
-
-// @include body("../images/back1.jpg");
-
-// @include nav;
-
-// header {
-//   .title-box {
-//     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
-//     margin-left: 30%;
-//     margin-right: 0px;
-//     margin-top: 5%;
-//     margin-bottom: 50%;
-//     text-align: center;
-//     border-radius: .3em;
-//     animation-name: fade-in;
-//     animation-duration: 4s;
-
-//     @keyframes fade-in {
-//       from {opacity: 0;}
-//       to {opacity: 1;}
-//     }
-
-//     h1 {
-//       font-size: 2rem;
-//       letter-spacing: 0.5em;
-//     }
-
-//     h2 {
-//       font-size: 2rem;
-//     }
-//   }
-// }
-
-// main {
-//   height: 1600px;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-
-//   .page-link {
-//     @include page-link($height: 150px);
-
-//     &:hover {
-//       letter-spacing: .5em;
-//     }
-
-//     p {
-//       margin: auto;
-//       text-align: center;
-//       font-size: 150%;
-
-//       a{
-//         text-decoration: none;
-//       }
-//     }
-//   }
-// }
-
-// @include footer;
-// footer {
-//   margin-top: 300px;
-// }
-
-// // Tablet and above size
-// @media screen and (min-width: 600px) {
-//   header {
-//     .title-box {
-//       margin-left: 30%;
-//     }
-//   }
-//   @include drop-down-menu;
-// }
