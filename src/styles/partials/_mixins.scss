@@ -39,7 +39,7 @@
 
   .parallax__layer--back-home {
     transform: translateZ(-1px) scale(2);
-    background-image: url("/src/images/home.jpg");
+    background-image: url("../images/home.jpg");
     background-size: cover;
     background-position: top;
     min-height: 200%;
