@@ -7,11 +7,11 @@
     <script src="https://kit.fontawesome.com/3e7ac28061.js" crossorigin="anonymous"></script>
     <script src="./javascript/script.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
-    <title>Document</title>
+    <title>Jason Stacy Blog</title>
 </head>
 
 <body class="blog-body">
+
     <header>
         <nav id="hamnav">
             <!-- hamburger -->
@@ -35,13 +35,14 @@
             </h1>
         </div>
     </header>
+
     <main class="main-basic">
 
-        <section>
             <article class="blogpost">
                 <button class="collapsible">11 May 2020: One AI Done… Mostly.</button>
                 <div class="content">
                     <div>
+                        <h3>One AI Done… Mostly.</h3>
                         <p>On my Ruby Uno clone called One…
                         </p>
                         <img src="images/robot.jpeg" alt="Futuristic robot in virtual background">
@@ -82,20 +83,16 @@
                             record the percentages of wins for each level of difficulty. Might have to leave this for
                             another day. Please download and enjoy the game as it is here: </p>
                         <a href="https://github.com/drumovski/One"></a>
-
-
                     </div>
-
-
                 </div>
             </article>
+
             <article class="blogpost">
                 <button class="collapsible">3 May 2020: AI and the One</button>
                 <div class="content">
                     <div>
-
+                        <h3>AI and the One</h3>
                         <img src="images/matrix.png" alt="Neo from Matrix with green digital effect background">
-
                         <p>
                             Just as Keanu was the One, so is my Ruby Uno program called One. The human player side is
                             done, I’ve refactored the code into a more OOP style and brought back all the functionality
@@ -126,22 +123,14 @@
                             score it can each time it plays a card. This is the starting point for the hardest level of
                             difficulty assuming 2 players:</p>
                         <p>Basic colour +70 (-1 for every matching number of another colour)
-
                             Skip +50 (-1 for every other skip)
-
                             Reverse +50 (-1 for every other reverse)
-
                             Pickup2 +40 (+1 for every other PU2)
-
                             Pickup4 +20
-
                             Wild +30
-
                             Hand rules:
-
                             Every different colour in hand+20
-
-                            If next opponent cards < 3=> Pickup 2 +100, Pickup 4 +100</p>
+                            If next opponent cards &lt; 3=> Pickup 2 +100, Pickup 4 +100</p>
                         <p>Two exceptions to the score method will be:
 
                         </p>
@@ -164,19 +153,18 @@
                         <p>Now to code it all. Wish me luck.</p>
                         <p></p>
                         <p></p>
-
                     </div>
-
-
                 </div>
             </article>
+
             <article class="blogpost">
                 <button class="collapsible">16 Apr 2020: One Two Testing</button>
                 <div class="content">
                     <div>
+                        <h3>One Two Testing</h3>
                         <div class="video-container">
                             <iframe width="420" height="315" src="https://www.youtube.com/embed/njVMovu9YvY"
-                                frameborder="0" allowfullscreen></iframe>
+                                allowfullscreen></iframe>
                         </div>
                         <p>
                             Trying a video this time. Watch the video and then this makes a bit more sense.
@@ -222,10 +210,12 @@
                     </div>
                 </div>
             </article>
+
             <article class="blogpost">
                 <button class="collapsible">8 Apr 2020: One</button>
                 <div class="content">
                     <div>
+                        <h3>One</h3>
                         <p>A card game for my son.
                         </p>
                         <img src="images/cards.jpeg" alt="Playing cards fanned out on a table">
@@ -235,7 +225,6 @@
                             play as many games we can fit in before he goes to bed. This has meant that I have become
                             somewhat of an expert (and so has he).
                         </p>
-                        <p>
                         <ol>
                             <li>
                                 It’s a fairly simple game as far as strategy goes and it got me thinking that it would
@@ -258,96 +247,59 @@
                                 If I call it “One” maybe I’ll avoid getting sued.
                             </li>
                         </ol>
-                        </p>
-
                         <p>So here goes. My only problem here is finding the time to do it in-between classes, coding
                             practice, assignments, looking after 2 kids, helping out the wife, keeping up the home,
-                            exercise, self care and the rest of life.</p>
-
+                            exercise, self care and the rest of life.
+                        </p>
                         <p>
                             Sheesh.
                         </p>
                         <p>I’ll keep you updated but here was where I started — an outline. Since blurting all this out,
                             I’ve learned about classes and its morphed into another version already but this is my
-                            starting point…</p>
+                            starting point…
+                        </p>
                         <p>ONE</p>
                         <p>Display rules
-
                             function create deck
-
                             create array of 108 cards called deck
-
                             each containing a hash card {colour: red, number: 7}
-
                             either [colour, number] or [colour, skip] [colour, rev] [colour, pickup_2]
-
                             or special cards -
-
                             [anycolour, null] or [anycolour, pickup_4]
-
                             Determine number of players and make array turn_order [player_1, player_2, etc]
-
                             create profiles — player_1_info = hash {type: human/computer, difficulty: easy}
-
                             Difficulty?
-
                             function Deal Cards
-
                             Take cards (each hash out of the deck array and into the hands arrays (1 hand array eg
                             player_1_hand for each player containing 7 random card hashes)
-
                             example — player_1_hand = [{red, 7},{blue, 5}, {anycolour, null}, {yellow, pickup_2}, {red,
                             0}
-
                             take random valid card from deck array and use it to start the discard array
-
                             top_card_number = number from card chosen
-
                             top_card_colour = colour from card chosen
-
                             function Human interface
-
                             show human their player_1_hand
-
                             input from human — card to play
-
                             ensure it follows turn logic
-
                             function Turn logic
-
                             if pickup_2 give 2 cards to next player in turn_order unless they have a pickup_2 also.
-
                             if pickup_4 give 4 cards to next player in turn_order unless they have a pickup_4 also.
-
                             only allow same colour or anycolour or same number/skip/reverse/pickup_2
-
                             add card to discard array
-
                             delete card from hand array
-
                             if current_player hand array is empty, current_player is the winner
-
                             if skip played, move next player in turn_order array to end
-
                             if rev, reverse turn_order array
-
                             if anycolour, ask player to choose colour and assign to top_card_colour
-
                             if current_player hand array has only one card left output “ONE!”
-
                             function Computer strategy hard?
-
                             try to play colour first, if more than one choice, choose the card with a number not
                             repeated in the hand array, if has pickup_2, save till last card
-
                             if no colour, play same number
-
                             if no colour or number, play anycolour and change colour to the colour most prevelent in
-                            hand array</p>
-
+                            hand array
+                        </p>
                     </div>
-
-
                 </div>
             </article>
 
@@ -355,13 +307,13 @@
                 <button class="collapsible">1 Apr 2020: Skinning Cats and Coding Like Elsa</button>
                 <div class="content">
                     <div>
+                        <h3>Skinning Cats and Coding Like Elsa</h3>
                         <p>
                             Firstly, don’t get me wrong, we have a cat, I love cats. She’s old and she throws up every
                             second day but I would never hurt her. I’ve seen what the internet does to people who #$%*
                             with cats…
                         </p>
                         <img src="images/cat.jpeg" alt="Cat looking down from above">
-
                         <p>
                             I am of course referring to the expression “There’s more than one way to skin a cat.” And
                             we’re talking about Ruby code here. You could even Rubify it (if that’s a word) — “There’s
@@ -401,17 +353,15 @@
                             an hour later. It’s a balancing act for sure.</p>
                         <p>I would love to get your opinions on this fellow developers and budding developers so please
                             share your thoughts.</p>
-
-
                     </div>
-
-
                 </div>
             </article>
+
             <article class="blogpost">
                 <button class="collapsible">28 Mar 2020: Making the leap</button>
                 <div class="content">
                     <div>
+                        <h3>Making the leap</h3>
                         <img src="images/ubuntu.jpeg" alt="Laptop with ubuntu logo on the screen">
                         <p>After my first week of coder academy, I was introduced to the command line. Pretty cool stuff
                             but
@@ -451,14 +401,14 @@
 
                         <p>Bye Windows. You won’t be missed.</p>
                     </div>
-
-
                 </div>
             </article>
+
             <article class="blogpost">
                 <button class="collapsible">25 Mar 2020: My Coding Journey Starts Here</button>
                 <div class="content">
                     <div>
+                        <h3>My Coding Journey Starts Here</h3>
                         <br>
                         <p>I keep thinking back to ‘Monty Python’s and Holy Grail’ and the line
                             “I’m 37, I’m not old!”
@@ -498,20 +448,19 @@
                         <p>So here I am, just finished the first week and have an inkling of Command Line and a smidge
                             of
                             Ruby but am super excited and have a thirst for more. Stay tuned.</p>
-
                     </div>
                 </div>
             </article>
-        </section>
 
     </main>
+
     <footer>
         <div id="icons">
             <a class="fab fa-twitter-square" href="https://twitter.com/drumovski"></a>
             <a class="fab fa-facebook-square"
-                href="https://www.facebook.com/Jason-the-Coder-107720830874149/?view_public_for=107720830874149">
-                <a class="fab fa-linkedin" href="https://www.linkedin.com/in/jason-stacy-09a4152b/"></a><i></i>
-                <a class="fab fa-medium" href="https://medium.com/@jason.stacy"></a><i></i>
+                href="https://www.facebook.com/Jason-the-Coder-107720830874149/?view_public_for=107720830874149"></a>
+            <a class="fab fa-linkedin" href="https://www.linkedin.com/in/jason-stacy-09a4152b/"></a>
+            <a class="fab fa-medium" href="https://medium.com/@jason.stacy"></a>
         </div>
         <div id="contacts">
             <a href="tel:+61402010945">+61 402 010 945</a>

@@ -219,7 +219,7 @@ header .title-box h1 {
   text-align: center;
 }
 
-.main-basic section article {
+.main-basic article {
   border-radius: .7em;
   -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
           box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
@@ -229,16 +229,16 @@ header .title-box h1 {
   width: 80%;
 }
 
-.main-basic section article h3 {
+.main-basic article h3 {
   padding: 5px;
   color: #eeeeee;
 }
 
-.main-basic section article img {
+.main-basic article img {
   max-width: 90%;
 }
 
-.main-basic section article p {
+.main-basic article p {
   max-width: 90%;
   text-align: center;
   margin: auto;
@@ -257,6 +257,7 @@ header .title-box h1 {
 
 #about-me .video-container iframe {
   position: absolute;
+  border: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -283,7 +284,7 @@ header .title-box h1 {
   letter-spacing: .1em;
 }
 
-.main-basic section .blogpost .content {
+.main-basic .blogpost .content {
   padding: 0 18px;
   max-height: 0;
   overflow: hidden;
@@ -291,37 +292,38 @@ header .title-box h1 {
   transition: max-height 0.2s ease-out;
 }
 
-.main-basic section .blogpost .content div {
+.main-basic .blogpost .content div {
   padding: 20px;
   margin-bottom: 20px;
 }
 
-.main-basic section .blogpost .content div img {
+.main-basic .blogpost .content div img {
   margin-right: 10px;
 }
 
-.main-basic section .blogpost .content div p {
+.main-basic .blogpost .content div p {
   text-align: left;
   max-width: 100%;
 }
 
-.main-basic section .blogpost .content div ol {
+.main-basic .blogpost .content div ol {
   padding-left: 20px;
 }
 
-.main-basic section .blogpost .content div ol li {
+.main-basic .blogpost .content div ol li {
   text-align: left;
 }
 
-.main-basic section .blogpost .content div .video-container {
+.main-basic .blogpost .content div .video-container {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   height: 0;
 }
 
-.main-basic section .blogpost .content div .video-container iframe {
+.main-basic .blogpost .content div .video-container iframe {
   position: absolute;
+  border: none;
   top: 0;
   left: 0;
   width: 100%;
@@ -437,28 +439,29 @@ footer #contacts a {
     -webkit-transition: letter-spacing .7s;
     transition: letter-spacing .7s;
   }
-  .main-basic section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .main-basic {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .main-basic section article {
+  .main-basic article {
     max-width: 45%;
   }
-  .main-basic section .blogpost {
+  .main-basic .blogpost {
     max-width: 95%;
   }
-  .main-basic section .blogpost .content div img {
+  .main-basic .blogpost .content div img {
     width: 60%;
     float: left;
     padding-right: 10px;
   }
-  .main-basic section #about-me {
+  .main-basic #about-me {
     max-width: 75%;
   }
-  .main-basic section #about-me .video-container {
+  .main-basic #about-me .video-container {
     width: 60%;
     float: left;
     margin-right: 20px;
