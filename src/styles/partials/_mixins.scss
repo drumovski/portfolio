@@ -1,15 +1,17 @@
+
+// Global initialization
 @mixin initialize {
   * {
     box-sizing: border-box;
     margin-top: 0;
-    // border: 1px solid green;
     padding: 0px;
     margin: 0px;
     color: $white;
-
+    font-family: 'Abel', sans-serif;
   }
 }
 
+// Paralax effect for home page only
 @mixin paralax {
   .parallax {
     perspective: 1px;
@@ -31,12 +33,14 @@
     width: 100vw;
   }
 
+  // Forward layer for the parallax effect (every element except the background image)
   .parallax__layer--forward {
     justify-content: space-between;
     transform: translateZ(0);
     min-height: 250%;
   }
 
+  // Background layer for the parallax effect (only the background image)
   .parallax__layer--back-home {
     transform: translateZ(-1px) scale(2);
     background-image: url("../images/home.jpg");
@@ -47,32 +51,31 @@
 
 }
 
-@mixin body {
-  body {
-    font-family: 'Abel', sans-serif;
-    // background-color: $white;
-    color: $white;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
+// Basic rules for all body elements
+// @mixin body {
+//   body {
 
+//     // color: $white;
+//     background-size: cover;
+//     // -webkit-background-size: cover;
+//     // -moz-background-size: cover;
+//     // -o-background-size: cover;
+//     background-position: top;
+//     background-attachment: fixed;
+//     // min-height: 100vh;
+//     // display: flex;
+//     // flex-direction: column;
+//     // justify-content: space-between;
+//   }
+// }
+
+// Home page styling
 @mixin main-home {
   .main-home {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    // width: 100%;
-
 
     .page-link {
       text-align: center;
@@ -87,32 +90,19 @@
       &:hover {
         letter-spacing: .5em;
       }
-
       p {
         margin: auto;
         text-align: center;
         font-size: 150%;
-
         a {
           text-decoration: none;
         }
       }
     }
   }
-
 }
 
-@mixin page-link ($height: 100px) {
-  text-align: center;
-  vertical-align: middle;
-  background: $gradient;
-  height: $height;
-  box-shadow: $box-shadow;
-  display: flex;
-  transition: letter-spacing 1s;
-}
-
-// Navigation dropdown and menu bar
+// Navigation dropdown and menu bar 
 @mixin nav {
   #hamnav label {
     display: inline-block;
@@ -134,8 +124,6 @@
       padding: 10px;
       text-decoration: none;
     }
-
-
   }
 
   /* Toggle Show/Hide Menu */
@@ -168,6 +156,7 @@
   }
 }
 
+// Navigation becomes row for media query when screen is big
 @mixin drop-down-menu {
 
   /* Hide Hamburger */
@@ -204,8 +193,9 @@
     display: flex;
     flex-direction: column;
     margin-top: 80px;
+    background: $gradient;
+    height: 100px;
 
-    @include page-link();
 
     #icons {
       width: 200px;
