@@ -144,7 +144,8 @@
   }
 
   #hamnav input:checked~#hamitems {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   #hamnav {
@@ -178,6 +179,7 @@
   /* Horizontal Menu Items */
   #hamitems {
     display: flex;
+    flex-direction: row;
 
     a {
       width: 16.666%;
