@@ -270,6 +270,7 @@ header .title-box h1 {
 
 #about-me {
   width: 90%;
+  padding: 15px;
 }
 
 #about-me .video-container {
