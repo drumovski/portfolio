@@ -253,6 +253,7 @@ header .title-box h1 {
   background: linear-gradient(180deg, rgba(37, 37, 37, 0.82) 0%, black 45%, black 55%, rgba(37, 37, 37, 0.82) 100%);
   margin: 35px auto;
   width: 80%;
+  padding: 15px;
 }
 
 .main-basic article h3 {
@@ -308,6 +309,10 @@ header .title-box h1 {
 .active,
 .collapsible:hover {
   letter-spacing: .1em;
+}
+
+.main-basic .blogpost {
+  padding: 0px;
 }
 
 .main-basic .blogpost .content {

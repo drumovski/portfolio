@@ -142,6 +142,7 @@ header {
     background: $gradient;
     margin: 35px auto;
     width: 80%;
+    padding: 15px;
 
     h3 {
       padding: 5px;
@@ -209,7 +210,7 @@ header {
 
 .main-basic {
   .blogpost {       // Larger container for each blog post  
-
+    padding: 0px;
     .content {
       // Drop down container
       padding: 0 18px;
