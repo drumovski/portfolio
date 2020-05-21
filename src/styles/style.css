@@ -125,7 +125,7 @@ body {
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
-  position: absolute;
+  min-height: 100vh;
 }
 
 header .title-box-home {
