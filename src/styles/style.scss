@@ -298,10 +298,16 @@ footer {
 }
 
 
-// Tablet and above size
+// Mobile size
 @media screen and (min-width: 600px) {
   @include drop-down-menu; // Navigation menu becomes row
+}
 
+
+
+
+  // Tablet and above size
+@media screen and (min-width: 900px) {
   .main-basic {
     // Multiple columns when size is big enough - applies to web and code pages
     flex-wrap: wrap;

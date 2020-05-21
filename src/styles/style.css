@@ -418,6 +418,9 @@ footer #contacts a {
     -webkit-transition: letter-spacing .7s;
     transition: letter-spacing .7s;
   }
+}
+
+@media screen and (min-width: 900px) {
   .main-basic {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
