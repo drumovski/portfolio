@@ -23,3 +23,6 @@ function resizeBackground() {
 
 $(window).resize(resizeBackground);
 resizeBackground();
+function resizeBackground() {
+  bg.height( $(window).height() + 60);
+}
