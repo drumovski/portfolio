@@ -1,5 +1,9 @@
 # Jason Stacy Portfolio Website
 
+
+
+### Links
+
 [Website](https://jasonstacyportfolio.netlify.app/index.html)
 
 [GitHub Repository](https://github.com/drumovski/portfolio)
@@ -10,7 +14,7 @@ This website is a showcase of my development work, details about me and my conta
 
 ### Functionality / features
 
-The site has 5 separate pages and they are all linked together through a navigation bar. The navigation bar is included throughout  all pages. The nav bar also is responsive and shrinks to a hamburger menu for mobile devices.
+The site has 5 separate pages and they are all linked together through a navigation bar. The navigation bar is included throughout all pages. The nav bar also is responsive and shrinks to a hamburger menu for mobile devices.
 
 The pages are:
 
