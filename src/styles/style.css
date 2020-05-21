@@ -62,7 +62,6 @@
   padding: 10px;
 }
 
-/* Break down menu items into vertical */
 #hamitems a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -74,7 +73,6 @@
   text-decoration: none;
 }
 
-/* Toggle Show/Hide Menu */
 #hamitems {
   display: none;
 }
@@ -394,12 +392,10 @@ footer #contacts a {
 }
 
 @media screen and (min-width: 600px) {
-  /* Hide Hamburger */
   #hamnav label,
   #hamburger {
     display: none;
   }
-  /* Horizontal Menu Items */
   #hamitems {
     display: -webkit-box;
     display: -ms-flexbox;

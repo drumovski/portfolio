@@ -5,9 +5,9 @@
 
 
 
-@include initialize; //basic styleguides for all pages
-@include paralax; //only for home screen - paralax effect
-@include nav; // navigation bar including hamburger/dropdown menu
+@include initialize; // Basic styleguides for all pages
+@include paralax; // Only for home screen - paralax effect
+@include nav; // Navigation bar including hamburger/dropdown menu
 
 
 
@@ -15,7 +15,6 @@
 // Different background images for each page
 .web-body {
   background-image: url("../images/web.jpg");
-
 }
 
 .code-body {
@@ -33,7 +32,7 @@
 
 
 
-// Styling for background images to remain fixed (except home page)
+// Background images to remain fixed (except home page)
 body {
   background-position: top;
   background-attachment: fixed;
@@ -46,13 +45,14 @@ body {
 
 // All title boxes for home and other pages
 header {
-  .title-box-home {    //Home page title box
+  .title-box-home {
+    // Home page title box
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
     margin: 5% 0% 10% 30%;
     text-align: center;
     border-radius: .3em;
     animation-name: fade-in;
-    animation-duration: 4s; // title box fade in when landing on home page
+    animation-duration: 4s; // Title box fade in when landing on home page
 
     @keyframes fade-in {
       from {
@@ -74,7 +74,8 @@ header {
     }
   }
 
-  .title-box {    //basic pages title boxes
+  .title-box {
+    // Basic pages title boxes
     background: $gradient;
     box-shadow: $box-shadow;
     width: 300px;
@@ -92,14 +93,15 @@ header {
 
 
 
-// home page main content - has different styling from the other pages
+// Home page main content - has different styling from the other pages
 .main-home {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 
-  .page-link {    // boxes containing the links for the other pages
+  .page-link {
+    // Boxes containing the links for the other pages
     text-align: center;
     vertical-align: middle;
     background: $gradient;
@@ -107,7 +109,7 @@ header {
     margin-top: 50px;
     box-shadow: $box-shadow;
     display: flex;
-    transition: letter-spacing 1s; // letters disperse when hovered over
+    transition: letter-spacing 1s; // Letters disperse when hovered over
 
     &:hover {
       letter-spacing: .5em;
@@ -128,7 +130,7 @@ header {
 
 
 
-// Sytling for all pages except the home page
+// All pages except the home page
 .main-basic {
   display: flex;
   flex-direction: column;
@@ -162,7 +164,7 @@ header {
 
 
 
-// About me page styling
+// About me page
 #about-me {
   width: 90%;
   padding: 15px;
@@ -192,8 +194,9 @@ header {
 
 
 
-// Blog page styling
-.collapsible {  // Blog headings
+// Blog page 
+.collapsible {
+  // Blog buttons
   border-radius: .7em;
   background: $gradient;
   cursor: pointer;
@@ -205,12 +208,14 @@ header {
 
 .active,
 .collapsible:hover {
-  letter-spacing: .1em;  // letters disperse when hovered over
+  letter-spacing: .1em; // Letters disperse when hovered over
 }
 
 .main-basic {
-  .blogpost {       // Larger container for each blog post  
+  .blogpost {
+    // Larger container for each blog post  
     padding: 0px;
+
     .content {
       // Drop down container
       padding: 0 18px;
@@ -241,7 +246,7 @@ header {
         }
 
         .video-container {
-          // container to make video responsive
+          // Container to make video responsive
           position: relative;
           padding-bottom: 56.25%;
           /* 16:9 */
@@ -262,7 +267,35 @@ header {
 }
 
 
-@include footer;
+
+// All footers
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  background: $gradient;
+  height: 100px;
+
+
+  #icons {
+    width: 200px;
+    margin: auto;
+
+    a {
+      margin: 0px 10px 0px;
+    }
+
+  }
+
+  #contacts {
+    width: 300px;
+    margin: 0px auto 30px;
+
+    a {
+      padding: 5px;
+    }
+  }
+}
 
 
 // Tablet and above size
@@ -270,17 +303,18 @@ header {
   @include drop-down-menu; // Navigation menu becomes row
 
   .main-basic {
-    // multiple columns when size is big enough - applies to web and code pages
+    // Multiple columns when size is big enough - applies to web and code pages
     flex-wrap: wrap;
     flex-direction: row;
 
     article {
       max-width: 45%;
     }
-    //styling for larger screens on blog page
+
+    // Larger screens on blog page
     .blogpost {
-      // needs to be large or dropdown doesn't work
-       max-width: 95%;
+      // Needs to be large or dropdown doesn't work
+      max-width: 95%;
 
       .content {
         div {
@@ -293,11 +327,11 @@ header {
       }
     }
 
-    //styling for larger screens on about me page - video box floats left
-    #about-me {   
+    // Larger screens on about me page - video box floats left
+    #about-me {
       max-width: 75%;
 
-      .video-container {  
+      .video-container {
         width: 60%;
         float: left;
         margin-right: 20px;
