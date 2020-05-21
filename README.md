@@ -40,15 +40,53 @@ The resume links to a PDF file to download.
 
 ### Screenshots
 
+
+
+##### Home page
+
 ![](docs/Screenshots/home.png)
+
+
+
+##### Web Development page
 
 ![](docs/Screenshots/web.png)
 
+
+
+##### Code page
+
 ![](docs/Screenshots/code.png)
+
+
+
+##### About Me page
 
 ![](docs/Screenshots/aboutme.png)
 
+
+
+##### Blog page
+
 ![](docs/Screenshots/blog.png)
+
+
+
+##### Footer example
+
+![](docs/Screenshots/footer.png)
+
+
+
+##### Hamburger
+
+![](docs/Screenshots/hamburger.png)
+
+
+
+##### Hamburger drop-down example
+
+![](docs/Screenshots/hamburger_dropdown.png)
 
 
 
