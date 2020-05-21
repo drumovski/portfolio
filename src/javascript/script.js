@@ -13,9 +13,7 @@ window.onload = function () {
       }
     });
   }
-};
-
-var bg = $("body");
+  var bg = $("body");
 
 function resizeBackground() {
     bg.height($(window).height());
@@ -26,3 +24,5 @@ resizeBackground();
 function resizeBackground() {
   bg.height( $(window).height() + 60);
 }
+};
+
