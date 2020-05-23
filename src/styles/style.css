@@ -160,10 +160,12 @@ header .title-box-home {
 header .title-box-home h1 {
   font-size: 2rem;
   letter-spacing: 0.5em;
+  padding-left: 30px;
 }
 
 header .title-box-home h2 {
   font-size: 2rem;
+  padding-left: 30px;
 }
 
 header .title-box {
@@ -250,7 +252,7 @@ header .title-box h1 {
   background: linear-gradient(180deg, rgba(37, 37, 37, 0.82) 0%, black 45%, black 55%, rgba(37, 37, 37, 0.82) 100%);
   margin: 35px auto;
   width: 80%;
-  padding: 15px;
+  padding: 0px 10px 20px 10px;
 }
 
 .main-basic article h3 {
@@ -269,7 +271,6 @@ header .title-box h1 {
 
 #about-me {
   width: 90%;
-  padding: 15px;
 }
 
 #about-me .video-container {
@@ -375,15 +376,15 @@ footer #icons {
 }
 
 footer #icons a {
-  margin: 0px 10px 0px;
+  margin: 0px 16px 0px;
 }
 
-footer #contacts {
+footer address {
   width: 300px;
   margin: 0px auto 30px;
 }
 
-footer #contacts a {
+footer address a {
   padding: 5px;
 }
 
@@ -417,6 +418,9 @@ footer #contacts a {
 }
 
 @media screen and (min-width: 900px) {
+  header .title-box-home {
+    margin: 5% 0% 10% 45%;
+  }
   .main-basic {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -432,7 +436,7 @@ footer #contacts a {
     max-width: 95%;
   }
   .main-basic .blogpost .content div img {
-    width: 60%;
+    width: 30%;
     float: left;
     padding-right: 10px;
   }

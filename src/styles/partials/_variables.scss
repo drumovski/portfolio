@@ -8,5 +8,8 @@ $transparent_grey: rgba(37, 37, 37, 0.82);
 // shadow
 $box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
 
-// box gradient
+// box gradient vertical
 $gradient: linear-gradient(180deg, $transparent_grey 0%, $black 45%, $black 55%, $transparent_grey 100%);
+
+// box gradient horizontal
+$gradient-h: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%)

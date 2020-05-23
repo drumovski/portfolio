@@ -47,7 +47,7 @@ body {
 header {
   .title-box-home {
     // Home page title box
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, $transparent_grey 10%, $black 30%, $black 100%);
+    background: $gradient-h;
     margin: 5% 0% 10% 30%;
     text-align: center;
     border-radius: .3em;
@@ -67,10 +67,12 @@ header {
     h1 {
       font-size: 2rem;
       letter-spacing: 0.5em;
+      padding-left: 30px;
     }
 
     h2 {
       font-size: 2rem;
+      padding-left: 30px;
     }
   }
 
@@ -144,7 +146,7 @@ header {
     background: $gradient;
     margin: 35px auto;
     width: 80%;
-    padding: 15px;
+    padding: 0px 10px 20px 10px;
 
     h3 {
       padding: 5px;
@@ -168,7 +170,6 @@ header {
 // About me page
 #about-me {
   width: 90%;
-  padding: 15px;
 
   .video-container {
     // container to make video responsive
@@ -279,12 +280,12 @@ footer {
     margin: auto;
 
     a {
-      margin: 0px 10px 0px;
+      margin: 0px 16px 0px;
     }
 
   }
 
-  #contacts {
+  address {
     width: 300px;
     margin: 0px auto 30px;
 
@@ -295,7 +296,7 @@ footer {
 }
 
 
-// Mobile size
+// Tablet size
 @media screen and (min-width: 600px) {
   @include drop-down-menu; // Navigation menu becomes row
 }
@@ -303,8 +304,15 @@ footer {
 
 
 
-  // Tablet and above size
+  // Desktop size
 @media screen and (min-width: 900px) {
+  header {
+  .title-box-home {
+    // Home page title box
+    margin: 5% 0% 10% 45%;
+  }
+}
+
   .main-basic {
     // Multiple columns when size is big enough - applies to web and code pages
     flex-wrap: wrap;
@@ -322,7 +330,7 @@ footer {
       .content {
         div {
           img {
-            width: 60%;
+            width: 30%;
             float: left;
             padding-right: 10px;
           }
