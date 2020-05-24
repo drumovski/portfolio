@@ -436,9 +436,10 @@ footer address a {
     max-width: 95%;
   }
   .main-basic .blogpost .content div img {
-    width: 30%;
+    width: 51%;
     float: left;
     padding-right: 10px;
+    padding-bottom: 10px;
   }
   .main-basic #about-me {
     max-width: 75%;
