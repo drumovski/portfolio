@@ -274,7 +274,7 @@ footer {
   background: $gradient;
   height: 100px;
 
-
+// Social media links
   #icons {
     width: 200px;
     margin: auto;
@@ -285,12 +285,15 @@ footer {
 
   }
 
+  // Contact details
   address {
-    width: 300px;
+    width: 350px;
     margin: 0px auto 30px;
+    display: flex;
+    justify-content: space-evenly;
 
     a {
-      padding: 5px;
+      padding: 5px; 
     }
   }
 }
