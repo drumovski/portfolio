@@ -302,11 +302,15 @@ body {
 }
 
 .main-basic .blogpost .content {
-  padding: 0px 18px;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
+}
+
+.main-basic .blogpost .content .end-content {
+  display: block;
+  padding-bottom: 20px;
 }
 
 .main-basic .blogpost .content img {
