@@ -150,13 +150,13 @@ body {
   margin: 5% 0% 10% 30%;
   text-align: center;
   border-radius: .3em;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  padding-left: 30px;
   -webkit-animation-name: fade-in;
           animation-name: fade-in;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
-  font-size: 2rem;
-  letter-spacing: 1rem;
-  padding-left: 30px;
 }
 
 @-webkit-keyframes fade-in {
@@ -197,15 +197,15 @@ body {
   transition: letter-spacing 1s;
 }
 
+.main-home .page-link:hover {
+  letter-spacing: .5rem;
+}
+
 .main-home .page-link a {
   text-decoration: none;
   margin: auto;
   text-align: center;
-  font-size: 1.5em;
-}
-
-.main-home .page-link:hover {
-  letter-spacing: .5em;
+  font-size: 1.5rem;
 }
 
 .title-box {

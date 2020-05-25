@@ -23,6 +23,7 @@
     position: relative;
   }
 
+  // rules to make the parallax effect work
   .parallax__layer {
     display: flex;
     flex-direction: column;
@@ -71,9 +72,9 @@
   #hamitems {
     list-style-type: none;
 
+    // Navigation menu styling
     li {
       a {
-        // Navigation menu styling
         display: block;
         width: 100%;
         border-top: 1px solid $grey;
@@ -89,11 +90,13 @@
     display: none;
   }
 
+  // Display ham items when checkbox ticked
   #hamnav input:checked~#hamitems {
     display: flex;
     flex-direction: column;
   }
 
+  // Basic styling for navigation menu
   #hamnav {
     width: 100%;
     background: $black;
@@ -109,6 +112,7 @@
     }
   }
 
+  // Hide checkbox behind hamburger icon
   #navigation-menu {
     display: none;
   }

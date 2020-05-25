@@ -6,7 +6,7 @@
 
 
 @include initialize; // Basic styleguides for all pages
-@include paralax; // Only for home screen - paralax effect
+@include paralax; // Only for home screen - paralax effect: background scrolls slower
 @include nav; // Navigation bar including hamburger/dropdown menu
 
 
@@ -37,7 +37,6 @@ body {
   background-position: top;
   background-attachment: fixed;
   background-size: cover;
-  // height: 100vh;
 }
 
 
@@ -51,35 +50,36 @@ body {
   flex-direction: column;
   justify-content: space-around;
 
+  // Home page title box
   .title-box-home {
-    // Home page title box
     background: $gradient-h;
     margin: 5% 0% 10% 30%;
     text-align: center;
-    border-radius: .3em;
-    animation-name: fade-in;
-    animation-duration: 4s; // Title box fade in when landing on home page
+    border-radius: .3em;    
     font-size: 2rem;
     letter-spacing: 1rem;
     padding-left: 30px;
 
+    // Title box fade in when landing on home page
+    animation-name: fade-in;
+    animation-duration: 4s; 
     @keyframes fade-in {
       from {
         opacity: 0;
       }
-
       to {
         opacity: 1;
       }
     }
 
+    // Portfolio sub heading has standard spacing
     .sub-title{
       letter-spacing: 0.05rem;
     }
   }
 
-  .page-link {
     // Boxes containing the links for the other pages
+  .page-link {
     text-align: center;
     vertical-align: middle;
     background: $gradient;
@@ -88,16 +88,15 @@ body {
     box-shadow: $box-shadow;
     display: flex;
     transition: letter-spacing 1s; // Letters disperse when hovered over
+    &:hover {
+      letter-spacing: .5rem;
+    }
 
     a {
       text-decoration: none;
       margin: auto;
       text-align: center;
-      font-size: 1.5em;
-    }
-
-    &:hover {
-      letter-spacing: .5em;
+      font-size: 1.5rem;
     }
   }
 }
@@ -107,7 +106,7 @@ body {
 
 // All pages except the home page
 .title-box {
-  // Basic pages title boxes
+  // Basic pages h1 title boxes
   background: $gradient;
   box-shadow: $box-shadow;
   width: 300px;
@@ -117,6 +116,7 @@ body {
   text-align: center;
 }
 
+// Basic layout for all content in all pages except home page
 .main-basic {
   display: flex;
   flex-direction: column;
@@ -124,6 +124,7 @@ body {
   margin: auto;
   text-align: center;
 
+  // Basic styling for all articles
   article {
     border-radius: .7em;
     box-shadow: $box-shadow;
@@ -132,14 +133,17 @@ body {
     width: 80%;
     padding: 0px 10px 20px 10px;
 
+    // Heading for articles
     h3 {
       padding: 5px;
     }
 
+    // Images for articles
     img {
       max-width: 90%;
     }
 
+    // Text for articles
     p {
       max-width: 90%;
       margin: auto;
@@ -155,13 +159,14 @@ body {
 #about-me {
   width: 90%;
 
+  // container to make video responsive
   .video-container {
-    // container to make video responsive
     position: relative;
     padding-bottom: 56.25%;
     /* 16:9 */
     height: 0;
 
+    // Video you-tube link
     iframe {
       position: absolute;
       border: none;
@@ -194,27 +199,30 @@ body {
 }
 
 .main-basic {
-  .blogpost {
-    // Larger container for each blog post  
+
+  // Larger container for each blog post  
+  .blogpost {    
     padding: 0px;
 
+    // Drop down container
     .content {
-      // Drop down container
       padding: 0 18px;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
 
+      // Additional container for drop down content to line up elements
       div {
-        // Additional container for drop down content to line up elements
         padding: 20px;
         margin-bottom: 20px;
 
+        // All blog images
         img {
           margin-right: 10px;
           padding: 10px 10px 10px 0px;
         }
 
+        // All blog text
         p {
           max-width: 100%;
         }
@@ -227,13 +235,14 @@ body {
           }
         }
 
+        // Container to make video responsive
         .video-container {
-          // Container to make video responsive
           position: relative;
           padding-bottom: 56.25%;
           /* 16:9 */
           height: 0;
 
+          // Video you-tube link
           iframe {
             position: absolute;
             border: none;
@@ -259,6 +268,7 @@ footer {
   height: 100px;
 
 
+  // Social media icons
   #icons {
     width: 200px;
     margin: auto;
@@ -266,9 +276,9 @@ footer {
     a {
       margin: 0px 16px 0px;
     }
-
   }
 
+  // Phone and email details
   address {
     width: 300px;
     margin: 0px auto 30px;
@@ -297,11 +307,12 @@ footer {
   }
 }
 
+  // Multiple columns when size is big enough - applies to web and code pages
   .main-basic {
-    // Multiple columns when size is big enough - applies to web and code pages
     flex-wrap: wrap;
     flex-direction: row;
 
+    // Articles become 2 rows
     article {
       max-width: 45%;
     }
@@ -311,6 +322,7 @@ footer {
       // Needs to be large or dropdown doesn't work
       max-width: 95%;
 
+      // Blog images float to the left
       .content {
         div {
           img {
@@ -323,10 +335,11 @@ footer {
       }
     }
 
-    // Larger screens on about me page - video box floats left
+    // Larger screens on about me page 
     #about-me {
       max-width: 75%;
 
+      // Video box floats left
       .video-container {
         width: 60%;
         float: left;
