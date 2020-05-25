@@ -308,11 +308,6 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-.main-basic .blogpost .content .end-content {
-  display: block;
-  padding-bottom: 20px;
-}
-
 .main-basic .blogpost .content img {
   padding: 10px 10px 10px 0px;
 }

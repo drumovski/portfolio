@@ -206,6 +206,7 @@ body {
   .blogpost {
     padding: 0px;
 
+
     // Drop down container
     .content  {
       // padding: 0px 18px;
@@ -213,10 +214,6 @@ body {
       overflow: hidden;
       transition: max-height 0.2s ease-out;
 
-      // Add padding to bottom of content
-      .end-content {
-        display: block;
-        padding-bottom: 20px;
       }
       // All blog images
       img {

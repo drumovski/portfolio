@@ -8,10 +8,11 @@ window.onload = function () {
       let content = this.nextElementSibling;
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + 20 + "px";
+        content.style.paddingBottom = null;
+        } else {
+        content.style.maxHeight = "100%";
+        content.style.paddingBottom = "20px";
       }
     });
   }
 };
-
