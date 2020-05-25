@@ -280,7 +280,7 @@ body {
   height: 100%;
 }
 
-.collapsible {
+.main-basic .collapsible {
   border-radius: .7em;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 37, 37, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(37, 37, 37, 0.82)));
   background: linear-gradient(180deg, rgba(37, 37, 37, 0.82) 0%, black 45%, black 55%, rgba(37, 37, 37, 0.82) 100%);
@@ -292,9 +292,9 @@ body {
   transition: letter-spacing 1s;
 }
 
-.active,
-.collapsible:hover {
-  letter-spacing: .1em;
+.main-basic .active,
+.main-basic .collapsible:hover {
+  letter-spacing: .1rem;
 }
 
 .main-basic .blogpost {
@@ -309,36 +309,28 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-.main-basic .blogpost .content div {
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.main-basic .blogpost .content div img {
-  margin-right: 10px;
+.main-basic .blogpost .content img {
   padding: 10px 10px 10px 0px;
 }
 
-.main-basic .blogpost .content div p {
-  max-width: 100%;
+.main-basic .blogpost .content ol {
+  list-style-position: inside;
+  padding-left: 5%;
 }
 
-.main-basic .blogpost .content div ol {
-  padding-left: 20px;
-}
-
-.main-basic .blogpost .content div ol li {
+.main-basic .blogpost .content ol li {
   text-align: left;
 }
 
-.main-basic .blogpost .content div .video-container {
+.main-basic .blogpost .content .video-container {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   height: 0;
 }
 
-.main-basic .blogpost .content div .video-container iframe {
+.main-basic .blogpost .content .video-container iframe {
+  padding: 10px 5% 10px 5%;
   position: absolute;
   border: none;
   top: 0;
@@ -416,11 +408,10 @@ footer address a {
   .main-basic .blogpost {
     max-width: 95%;
   }
-  .main-basic .blogpost .content div img {
+  .main-basic .blogpost .content img {
     width: 51%;
     float: left;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    padding: 10px 20px 10px 5%;
   }
   .main-basic #about-me {
     max-width: 75%;

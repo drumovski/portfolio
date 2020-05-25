@@ -55,30 +55,32 @@ body {
     background: $gradient-h;
     margin: 5% 0% 10% 30%;
     text-align: center;
-    border-radius: .3em;    
+    border-radius: .3em;
     font-size: 2rem;
     letter-spacing: 1rem;
     padding-left: 30px;
 
     // Title box fade in when landing on home page
     animation-name: fade-in;
-    animation-duration: 4s; 
+    animation-duration: 4s;
+
     @keyframes fade-in {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
     }
 
     // Portfolio sub heading has standard spacing
-    .sub-title{
+    .sub-title {
       letter-spacing: 0.05rem;
     }
   }
 
-    // Boxes containing the links for the other pages
+  // Boxes containing the links for the other pages
   .page-link {
     text-align: center;
     vertical-align: middle;
@@ -88,6 +90,7 @@ body {
     box-shadow: $box-shadow;
     display: flex;
     transition: letter-spacing 1s; // Letters disperse when hovered over
+
     &:hover {
       letter-spacing: .5rem;
     }
@@ -182,27 +185,26 @@ body {
 
 
 // Blog page 
-.collapsible {
-  // Blog buttons
-  border-radius: .7em;
-  background: $gradient;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  transition: letter-spacing 1s;
-}
-
-.active,
-.collapsible:hover {
-  letter-spacing: .1em; // Letters disperse when hovered over
-}
-
 .main-basic {
+  .collapsible {
+    // Blog buttons
+    border-radius: .7em;
+    background: $gradient;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    transition: letter-spacing 1s;
+  }
+
+  .active,
+  .collapsible:hover {
+    letter-spacing: .1rem; // Letters disperse when hovered over
+  }
 
   // Larger container for each blog post  
-  .blogpost {    
-    padding: 0px; // Stops content spilling out of button
+  .blogpost {
+    padding: 0px;
 
     // Drop down container
     .content {
@@ -210,54 +212,44 @@ body {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
-      
 
-      // Additional container for drop down content to line up elements
-      div {
-        padding: 20px;
-        margin-bottom: 20px;
-        
+      // All blog images
+      img {
+        padding: 10px 10px 10px 0px;
+      }
 
-        // All blog images
-        img {
-          margin-right: 10px;
-          padding: 10px 10px 10px 0px;
+      // line up ol with the rest of the p content
+      ol {
+        list-style-position: inside;
+        padding-left: 5%;
+
+        li {
+          text-align: left;
         }
+      }
 
-        // All blog text
-        p {
-          max-width: 100%;
-        }
+      // Container to make video responsive
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        height: 0;
 
-        ol {
-          padding-left: 20px;
-
-          li {
-            text-align: left;
-          }
-        }
-
-        // Container to make video responsive
-        .video-container {
-          position: relative;
-          padding-bottom: 56.25%;
-          /* 16:9 */
-          height: 0;
-
-          // Video you-tube link
-          iframe {
-            position: absolute;
-            border: none;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          }
+        // Video you-tube link
+        iframe {
+          padding: 10px 5% 10px 5%;
+          position: absolute;
+          border: none;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
         }
       }
     }
   }
 }
+
 
 
 
@@ -300,14 +292,14 @@ footer {
 
 
 
-  // Desktop size
+// Desktop size
 @media screen and (min-width: 900px) {
   header {
-  .title-box-home {
-    // Home page title box
-    margin: 5% 0% 10% 45%;
+    .title-box-home {
+      // Home page title box
+      margin: 5% 0% 10% 45%;
+    }
   }
-}
 
   // Multiple columns when size is big enough - applies to web and code pages
   .main-basic {
@@ -326,13 +318,10 @@ footer {
 
       // Blog images float to the left
       .content {
-        div {
-          img {
-            width: 51%;
-            float: left;
-            padding-right: 10px;
-            padding-bottom: 10px;
-          }
+        img {
+          width: 51%;
+          float: left;
+          padding: 10px 20px 10px 5%;
         }
       }
     }
