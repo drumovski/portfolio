@@ -308,27 +308,27 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-.main-basic .blogpost .content img {
+.main-basic .blogpost img {
   padding: 10px 10px 10px 0px;
 }
 
-.main-basic .blogpost .content ol {
+.main-basic .blogpost ol {
   list-style-position: inside;
   padding-left: 5%;
 }
 
-.main-basic .blogpost .content ol li {
+.main-basic .blogpost ol li {
   text-align: left;
 }
 
-.main-basic .blogpost .content .video-container {
+.main-basic .blogpost .video-container {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   height: 0;
 }
 
-.main-basic .blogpost .content .video-container iframe {
+.main-basic .blogpost .video-container iframe {
   padding: 10px 5% 10px 5%;
   position: absolute;
   border: none;
@@ -419,6 +419,7 @@ footer address a {
     width: 60%;
     float: left;
     margin-right: 20px;
+    margin-left: 5%;
   }
 }
 /*# sourceMappingURL=style.css.map */

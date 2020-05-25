@@ -208,49 +208,50 @@ body {
 
 
     // Drop down container
-    .content  {
+    .content {
       // padding: 0px 18px;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
 
+    }
+
+    // All blog images
+    img {
+      padding: 10px 10px 10px 0px;
+    }
+
+    // line up ol with the rest of the p content
+    ol {
+      list-style-position: inside;
+      padding-left: 5%;
+
+      li {
+        text-align: left;
       }
-      // All blog images
-      img {
-        padding: 10px 10px 10px 0px;
-      }
+    }
 
-      // line up ol with the rest of the p content
-      ol {
-        list-style-position: inside;
-        padding-left: 5%;
+    // Container to make video responsive
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      height: 0;
 
-        li {
-          text-align: left;
-        }
-      }
-
-      // Container to make video responsive
-      .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        /* 16:9 */
-        height: 0;
-
-        // Video you-tube link
-        iframe {
-          padding: 10px 5% 10px 5%;
-          position: absolute;
-          border: none;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
+      // Video you-tube link
+      iframe {
+        padding: 10px 5% 10px 5%;
+        position: absolute;
+        border: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
 }
+
 
 
 
@@ -337,6 +338,7 @@ footer {
         width: 60%;
         float: left;
         margin-right: 20px;
+        margin-left: 5%;
       }
     }
   }
