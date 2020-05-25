@@ -202,19 +202,21 @@ body {
 
   // Larger container for each blog post  
   .blogpost {    
-    padding: 0px;
+    padding: 0px; // Stops content spilling out of button
 
     // Drop down container
     .content {
-      padding: 0 18px;
+      padding: 0px 18px;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.2s ease-out;
+      
 
       // Additional container for drop down content to line up elements
       div {
         padding: 20px;
         margin-bottom: 20px;
+        
 
         // All blog images
         img {
