@@ -57,25 +57,30 @@
 
 // Navigation dropdown and menu bar 
 @mixin nav {
+  // Hamburger styling
   #hamnav label {
     display: inline-block;
     color: $white;
-    background: $orange;
+    background: $orange; 
     font-style: normal;
     font-size: 1.2em;
     padding: 10px;
   }
 
-  // Break down menu items into vertical 
+  // Menu items are vertical in drop-down
   #hamitems {
-    a {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-      border-top: 1px solid $grey;
-      text-align: center;
-      padding: 10px;
-      text-decoration: none;
+    list-style-type: none;
+
+    li {
+      a {
+        // Navigation menu styling
+        display: block;
+        width: 100%;
+        border-top: 1px solid $grey;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+      }
     }
   }
 
@@ -113,7 +118,7 @@
 
 
 
-// Navigation becomes row for media query when screen is big
+// Navigation items becomes row for media query when screen is big
 @mixin drop-down-menu {
 
   // Hide Hamburger 
@@ -127,18 +132,8 @@
     display: flex;
     flex-direction: row;
 
-    a {
-      width: 16.666%;
-      padding: 10px;
-      color: $white;
-      text-decoration: none;
-      text-align: center;
-
-      &:hover {
-        background: $orange;
-        letter-spacing: .15em;
-        transition: letter-spacing .7s;
-      }
+    li {
+      width: 16.666%; // evenly space nav items across the page
     }
   }
 }

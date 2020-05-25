@@ -62,9 +62,11 @@
   padding: 10px;
 }
 
-#hamitems a {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+#hamitems {
+  list-style-type: none;
+}
+
+#hamitems li a {
   display: block;
   width: 100%;
   border-top: 1px solid #333;
@@ -391,18 +393,8 @@ footer address a {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  #hamitems a {
+  #hamitems li {
     width: 16.666%;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-  }
-  #hamitems a:hover {
-    background: #c0460d;
-    letter-spacing: .15em;
-    -webkit-transition: letter-spacing .7s;
-    transition: letter-spacing .7s;
   }
 }
 
