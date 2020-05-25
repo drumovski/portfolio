@@ -56,7 +56,6 @@ body {
     margin: 5% 0% 10% 30%;
     text-align: center;
     border-radius: .3em;
-    font-size: 2rem;
     letter-spacing: 1rem;
     padding-left: 30px;
 
@@ -96,10 +95,10 @@ body {
     }
 
     a {
+      font-size: 1.5rem;
       text-decoration: none;
       margin: auto;
       text-align: center;
-      font-size: 1.5rem;
     }
   }
 }
@@ -114,8 +113,7 @@ body {
   box-shadow: $box-shadow;
   width: 300px;
   margin: 25px auto 25px;
-  border-radius: .2em;
-  font-size: 2em;
+  border-radius: .2rem;
   text-align: center;
 }
 
@@ -277,7 +275,9 @@ footer {
 
   // Phone and email details
   address {
-    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    width: 350px;
     margin: 0px auto 30px;
 
     a {
