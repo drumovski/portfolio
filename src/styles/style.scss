@@ -43,8 +43,14 @@ body {
 
 
 
-// All title boxes for home and other pages
-header {
+
+// Home page main content - has different styling from the other pages
+.main-home {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   .title-box-home {
     // Home page title box
     background: $gradient-h;
@@ -53,6 +59,9 @@ header {
     border-radius: .3em;
     animation-name: fade-in;
     animation-duration: 4s; // Title box fade in when landing on home page
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    padding-left: 30px;
 
     @keyframes fade-in {
       from {
@@ -64,43 +73,10 @@ header {
       }
     }
 
-    h1 {
-      font-size: 2rem;
-      letter-spacing: 0.5em;
-      padding-left: 30px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      padding-left: 30px;
+    .sub-title{
+      letter-spacing: 0.05rem;
     }
   }
-
-  .title-box {
-    // Basic pages title boxes
-    background: $gradient;
-    box-shadow: $box-shadow;
-    width: 300px;
-    margin: 25px auto 25px;
-    border-radius: .2em;
-
-    h1 {
-      font-size: 2em;
-      margin: auto;
-      text-align: center;
-    }
-  }
-}
-
-
-
-
-// Home page main content - has different styling from the other pages
-.main-home {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 
   .page-link {
     // Boxes containing the links for the other pages
@@ -113,18 +89,15 @@ header {
     display: flex;
     transition: letter-spacing 1s; // Letters disperse when hovered over
 
-    &:hover {
-      letter-spacing: .5em;
-    }
-
-    h3 {
+    a {
+      text-decoration: none;
       margin: auto;
       text-align: center;
       font-size: 1.5em;
+    }
 
-      a {
-        text-decoration: none;
-      }
+    &:hover {
+      letter-spacing: .5em;
     }
   }
 }
@@ -133,6 +106,17 @@ header {
 
 
 // All pages except the home page
+.title-box {
+  // Basic pages title boxes
+  background: $gradient;
+  box-shadow: $box-shadow;
+  width: 300px;
+  margin: 25px auto 25px;
+  border-radius: .2em;
+  font-size: 2em;
+  text-align: center;
+}
+
 .main-basic {
   display: flex;
   flex-direction: column;

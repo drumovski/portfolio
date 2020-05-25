@@ -101,7 +101,7 @@
   transition: letter-spacing .7s;
 }
 
-#hamburger {
+#navigation-menu {
   display: none;
 }
 
@@ -127,7 +127,22 @@ body {
   background-size: cover;
 }
 
-header .title-box-home {
+.main-home {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-home .title-box-home {
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(10%, rgba(37, 37, 37, 0.82)), color-stop(30%, black), to(black));
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(37, 37, 37, 0.82) 10%, black 30%, black 100%);
   margin: 5% 0% 10% 30%;
@@ -137,6 +152,9 @@ header .title-box-home {
           animation-name: fade-in;
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  padding-left: 30px;
 }
 
 @-webkit-keyframes fade-in {
@@ -157,46 +175,8 @@ header .title-box-home {
   }
 }
 
-header .title-box-home h1 {
-  font-size: 2rem;
-  letter-spacing: 0.5em;
-  padding-left: 30px;
-}
-
-header .title-box-home h2 {
-  font-size: 2rem;
-  padding-left: 30px;
-}
-
-header .title-box {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 37, 37, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(37, 37, 37, 0.82)));
-  background: linear-gradient(180deg, rgba(37, 37, 37, 0.82) 0%, black 45%, black 55%, rgba(37, 37, 37, 0.82) 100%);
-  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
-          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
-  width: 300px;
-  margin: 25px auto 25px;
-  border-radius: .2em;
-}
-
-header .title-box h1 {
-  font-size: 2em;
-  margin: auto;
-  text-align: center;
-}
-
-.main-home {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+.main-home .title-box-home .sub-title {
+  letter-spacing: 0.05rem;
 }
 
 .main-home .page-link {
@@ -215,18 +195,27 @@ header .title-box h1 {
   transition: letter-spacing 1s;
 }
 
-.main-home .page-link:hover {
-  letter-spacing: .5em;
-}
-
-.main-home .page-link h3 {
+.main-home .page-link a {
+  text-decoration: none;
   margin: auto;
   text-align: center;
   font-size: 1.5em;
 }
 
-.main-home .page-link h3 a {
-  text-decoration: none;
+.main-home .page-link:hover {
+  letter-spacing: .5em;
+}
+
+.title-box {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(37, 37, 37, 0.82)), color-stop(45%, black), color-stop(55%, black), to(rgba(37, 37, 37, 0.82)));
+  background: linear-gradient(180deg, rgba(37, 37, 37, 0.82) 0%, black 45%, black 55%, rgba(37, 37, 37, 0.82) 100%);
+  -webkit-box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+          box-shadow: 10px 9px 5px -1px rgba(0, 0, 0, 0.26);
+  width: 300px;
+  margin: 25px auto 25px;
+  border-radius: .2em;
+  font-size: 2em;
+  text-align: center;
 }
 
 .main-basic {
@@ -390,7 +379,7 @@ footer address a {
 
 @media screen and (min-width: 600px) {
   #hamnav label,
-  #hamburger {
+  #navigation-menu {
     display: none;
   }
   #hamitems {
