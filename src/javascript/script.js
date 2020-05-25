@@ -9,7 +9,7 @@ window.onload = function () {
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
         content.style.paddingBottom = null;
-        } else {
+      } else {
         content.style.maxHeight = "100%";
         content.style.paddingBottom = "20px";
       }

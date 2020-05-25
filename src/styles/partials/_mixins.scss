@@ -58,11 +58,12 @@
 
 // Navigation dropdown and menu bar 
 @mixin nav {
+
   // Hamburger styling
   #hamnav label {
     display: inline-block;
     color: $white;
-    background: $orange; 
+    background: $orange;
     font-style: normal;
     font-size: 1.2em;
     padding: 10px;
