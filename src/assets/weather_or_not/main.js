@@ -76,7 +76,7 @@ const showExtraWeather = (data) => {  // content after clicking more info button
   // This div has a red right border that creates the line.
   // The width of the moonline div represents where we are in the moon phase cycle as a percentage.
 
-  moonPhase.src = "moonphases/moons2.png";       // image showing different phases of the moon. 
+  moonPhase.src = "moons2.png";       // image showing different phases of the moon. 
   moonLine.style.borderRight = "5px solid #e01b45"; // indicator line showing current phase of the moon
   let moonWidth = Math.floor(data[0].moon_phase_lunation * 100);  // translates moon phase data (0-1) to div width %
   moonLine.style.width = `${moonWidth}%`; //apply percentage width to the moonline div. 
