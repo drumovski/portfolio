@@ -9,7 +9,7 @@ html {
 body {
   color: white;
   text-align: center;
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
 }
 
 .disappear {
@@ -21,7 +21,7 @@ p {
 }
 
 #app-name {
-  font-family: 'Philosopher', sans-serif;
+  font-family: "Philosopher", sans-serif;
   font-size: 60px;
   font-weight: 700;
   text-shadow: 2px 4px rgba(0, 0, 0, 0.5);
@@ -87,7 +87,8 @@ p {
   margin: auto;
 }
 
-#tempCelcius, #tempFarenheit {
+#tempCelcius,
+#tempFarenheit {
   font-size: 80px;
   margin: 10px 0px;
   text-shadow: 2px 6px rgba(0, 0, 0, 0.5);

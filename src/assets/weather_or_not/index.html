@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Philosopher:wght@700&display=swap" rel="stylesheet"> 
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Philosopher:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
@@ -17,8 +20,9 @@
       <label for="City"
         >City: <input type="text" class="inputValue" placeholder="Enter a city"
       /></label>
+      <br>
       <label for="Country code"
-        >Country code:
+        >Two letter country code:
         <input
           type="text"
           label="Country code"
@@ -29,13 +33,14 @@
     </div>
 
     <div class="output-data">
+      <p id = error-message></p>
       <h2 id="city"></h2>
       <p id="current-date"></p>
       <img id="current-image" src="" alt="" />
       <p id="description"></p>
       <div class="temp">
-        <p id="tempCelcius"></p>
-        <p id="tempFarenheit" class="disappear"></p>
+        <p id="tempCelcius" class = "temps"></p>
+        <p id="tempFarenheit" class="disappear temps"></p>
       </div>
       <p id="max-min"></p>
 
